@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "version": "V8_8_2_PRODUCTION_CUDA_GRAPH_INTEGRATION_GATE",
+  "torch": "2.12.1+cu132",
+  "cuda": "13.2",
+  "gpu": "NVIDIA GeForce RTX 5070",
+  "checkpoint": "models/v8_8_1_longtraj_gpu_replay_td_200k.pt",
+  "batch_size": 8192,
+  "policy_parity": "BIT_EXACT_PASS",
+  "capture_non_destructive": true,
+  "optimizer_step_exact": true
+}

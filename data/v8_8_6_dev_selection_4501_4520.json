@@ -1,0 +1,397 @@
+{
+  "purpose": "V8_8_6_DEVELOPMENT_SELECTION_HANDOFF",
+  "development_seeds": [
+    4501,
+    4502,
+    4503,
+    4504,
+    4505,
+    4506,
+    4507,
+    4508,
+    4509,
+    4510,
+    4511,
+    4512,
+    4513,
+    4514,
+    4515,
+    4516,
+    4517,
+    4518,
+    4519,
+    4520
+  ],
+  "development_cache": "data/v8_8_6_checkpoint_dev_4501_4520.json",
+  "selection_rule": [
+    "lowest_gameovers",
+    "highest_reward_per_1000",
+    "highest_average_value"
+  ],
+  "normalized_gate": 0.6,
+  "formal_champion": {
+    "label": "champion_v8_8_150k_norm",
+    "path": "models/v8_8_jax_vectorized_td_150k.pt",
+    "gate": 0.6,
+    "summary": {
+      "pieces": 2000.0,
+      "lines": 796.05,
+      "tetrises": 95.55,
+      "value": 971675.0,
+      "reward_per_1000": 485837.5,
+      "avg_height": 14.0,
+      "worst_height": 15,
+      "gameovers": 0,
+      "switch_rate": 25.7875
+    }
+  },
+  "selected": {
+    "label": "v8_8_6_31200k_norm",
+    "path": "models/v8_8_6_affinity_sharedweight_cuda_graph_td_31200k.pt",
+    "gate": 0.6,
+    "env_steps": 31200000,
+    "gradient_steps": 780748,
+    "interrupted": false,
+    "summary": {
+      "pieces": 2000.0,
+      "lines": 797.05,
+      "tetrises": 154.25,
+      "value": 1100445.0,
+      "reward_per_1000": 550222.5,
+      "avg_height": 12.7,
+      "worst_height": 14,
+      "gameovers": 0,
+      "switch_rate": 26.932499999999997
+    },
+    "paired_vs_champion": {
+      "mean": 128770.0,
+      "lo": 117897.49756747494,
+      "hi": 139642.50243252504,
+      "wins": 20,
+      "ties": 0,
+      "losses": 0
+    }
+  },
+  "ranking": [
+    {
+      "rank": 1,
+      "label": "v8_8_6_31200k_norm",
+      "path": "models/v8_8_6_affinity_sharedweight_cuda_graph_td_31200k.pt",
+      "env_steps": 31200000,
+      "gradient_steps": 780748,
+      "interrupted": false,
+      "summary": {
+        "pieces": 2000.0,
+        "lines": 797.05,
+        "tetrises": 154.25,
+        "value": 1100445.0,
+        "reward_per_1000": 550222.5,
+        "avg_height": 12.7,
+        "worst_height": 14,
+        "gameovers": 0,
+        "switch_rate": 26.932499999999997
+      },
+      "paired_vs_champion": {
+        "mean": 128770.0,
+        "lo": 117897.49756747494,
+        "hi": 139642.50243252504,
+        "wins": 20,
+        "ties": 0,
+        "losses": 0
+      }
+    },
+    {
+      "rank": 2,
+      "label": "v8_8_6_22200k_norm",
+      "path": "models/v8_8_6_affinity_sharedweight_cuda_graph_td_22200k.pt",
+      "env_steps": 22200000,
+      "gradient_steps": 557126,
+      "interrupted": false,
+      "summary": {
+        "pieces": 2000.0,
+        "lines": 797.0,
+        "tetrises": 154.35,
+        "value": 1099410.0,
+        "reward_per_1000": 549705.0,
+        "avg_height": 13.25,
+        "worst_height": 15,
+        "gameovers": 0,
+        "switch_rate": 26.797500000000003
+      },
+      "paired_vs_champion": {
+        "mean": 127735.0,
+        "lo": 114606.06218342173,
+        "hi": 140863.93781657825,
+        "wins": 20,
+        "ties": 0,
+        "losses": 0
+      }
+    },
+    {
+      "rank": 3,
+      "label": "v8_8_6_26660k_norm",
+      "path": "models/v8_8_6_affinity_sharedweight_cuda_graph_td_26660k.pt",
+      "env_steps": 26660672,
+      "gradient_steps": 667836,
+      "interrupted": false,
+      "summary": {
+        "pieces": 2000.0,
+        "lines": 796.35,
+        "tetrises": 152.5,
+        "value": 1096425.0,
+        "reward_per_1000": 548212.5,
+        "avg_height": 12.8,
+        "worst_height": 16,
+        "gameovers": 0,
+        "switch_rate": 26.805
+      },
+      "paired_vs_champion": {
+        "mean": 124750.0,
+        "lo": 113405.90708040431,
+        "hi": 136094.09291959569,
+        "wins": 20,
+        "ties": 0,
+        "losses": 0
+      }
+    },
+    {
+      "rank": 4,
+      "label": "v8_8_6_29660k_norm",
+      "path": "models/v8_8_6_affinity_sharedweight_cuda_graph_td_29660k.pt",
+      "env_steps": 29660672,
+      "gradient_steps": 742458,
+      "interrupted": false,
+      "summary": {
+        "pieces": 2000.0,
+        "lines": 796.65,
+        "tetrises": 152.45,
+        "value": 1095985.0,
+        "reward_per_1000": 547992.5,
+        "avg_height": 13.4,
+        "worst_height": 16,
+        "gameovers": 0,
+        "switch_rate": 27.189999999999998
+      },
+      "paired_vs_champion": {
+        "mean": 124310.0,
+        "lo": 111450.96514745576,
+        "hi": 137169.03485254422,
+        "wins": 20,
+        "ties": 0,
+        "losses": 0
+      }
+    },
+    {
+      "rank": 5,
+      "label": "v8_8_6_16200k_norm",
+      "path": "models/v8_8_6_affinity_sharedweight_cuda_graph_td_16200k.pt",
+      "env_steps": 16200000,
+      "gradient_steps": 408046,
+      "interrupted": false,
+      "summary": {
+        "pieces": 2000.0,
+        "lines": 796.1,
+        "tetrises": 151.75,
+        "value": 1093970.0,
+        "reward_per_1000": 546985.0,
+        "avg_height": 13.1,
+        "worst_height": 15,
+        "gameovers": 0,
+        "switch_rate": 27.0025
+      },
+      "paired_vs_champion": {
+        "mean": 122295.0,
+        "lo": 110657.6802019492,
+        "hi": 133932.3197980508,
+        "wins": 20,
+        "ties": 0,
+        "losses": 0
+      }
+    },
+    {
+      "rank": 6,
+      "label": "v8_8_6_23660k_norm",
+      "path": "models/v8_8_6_affinity_sharedweight_cuda_graph_td_INTERRUPTED_23660k.pt",
+      "env_steps": 23660672,
+      "gradient_steps": 593418,
+      "interrupted": true,
+      "summary": {
+        "pieces": 2000.0,
+        "lines": 796.85,
+        "tetrises": 151.25,
+        "value": 1093245.0,
+        "reward_per_1000": 546622.5,
+        "avg_height": 13.5,
+        "worst_height": 15,
+        "gameovers": 0,
+        "switch_rate": 26.615
+      },
+      "paired_vs_champion": {
+        "mean": 121570.0,
+        "lo": 111556.2856858049,
+        "hi": 131583.7143141951,
+        "wins": 20,
+        "ties": 0,
+        "losses": 0
+      }
+    },
+    {
+      "rank": 7,
+      "label": "v8_8_6_10200k_norm",
+      "path": "models/v8_8_6_affinity_sharedweight_cuda_graph_td_10200k.pt",
+      "env_steps": 10200000,
+      "gradient_steps": 258965,
+      "interrupted": false,
+      "summary": {
+        "pieces": 2000.0,
+        "lines": 796.35,
+        "tetrises": 148.75,
+        "value": 1087095.0,
+        "reward_per_1000": 543547.5,
+        "avg_height": 13.2,
+        "worst_height": 16,
+        "gameovers": 0,
+        "switch_rate": 27.052500000000002
+      },
+      "paired_vs_champion": {
+        "mean": 115420.0,
+        "lo": 102072.11446321337,
+        "hi": 128767.88553678663,
+        "wins": 20,
+        "ties": 0,
+        "losses": 0
+      }
+    },
+    {
+      "rank": 8,
+      "label": "v8_8_6_13200k_norm",
+      "path": "models/v8_8_6_affinity_sharedweight_cuda_graph_td_13200k.pt",
+      "env_steps": 13200000,
+      "gradient_steps": 333505,
+      "interrupted": false,
+      "summary": {
+        "pieces": 2000.0,
+        "lines": 796.35,
+        "tetrises": 148.45,
+        "value": 1085555.0,
+        "reward_per_1000": 542777.5,
+        "avg_height": 13.3,
+        "worst_height": 16,
+        "gameovers": 0,
+        "switch_rate": 26.987499999999997
+      },
+      "paired_vs_champion": {
+        "mean": 113880.0,
+        "lo": 105210.94391783111,
+        "hi": 122549.05608216889,
+        "wins": 20,
+        "ties": 0,
+        "losses": 0
+      }
+    },
+    {
+      "rank": 9,
+      "label": "v8_8_6_7200k_norm",
+      "path": "models/v8_8_6_affinity_sharedweight_cuda_graph_td_7200k.pt",
+      "env_steps": 7200000,
+      "gradient_steps": 184425,
+      "interrupted": false,
+      "summary": {
+        "pieces": 2000.0,
+        "lines": 796.4,
+        "tetrises": 146.5,
+        "value": 1082480.0,
+        "reward_per_1000": 541240.0,
+        "avg_height": 13.75,
+        "worst_height": 15,
+        "gameovers": 0,
+        "switch_rate": 27.05
+      },
+      "paired_vs_champion": {
+        "mean": 110805.0,
+        "lo": 98472.8401892493,
+        "hi": 123137.1598107507,
+        "wins": 20,
+        "ties": 0,
+        "losses": 0
+      }
+    },
+    {
+      "rank": 10,
+      "label": "v8_8_6_4200k_norm",
+      "path": "models/v8_8_6_affinity_sharedweight_cuda_graph_td_4200k.pt",
+      "env_steps": 4200000,
+      "gradient_steps": 109884,
+      "interrupted": false,
+      "summary": {
+        "pieces": 2000.0,
+        "lines": 797.25,
+        "tetrises": 145.0,
+        "value": 1080265.0,
+        "reward_per_1000": 540132.5,
+        "avg_height": 13.65,
+        "worst_height": 17,
+        "gameovers": 0,
+        "switch_rate": 27.275
+      },
+      "paired_vs_champion": {
+        "mean": 108590.0,
+        "lo": 95532.85733231767,
+        "hi": 121647.14266768233,
+        "wins": 20,
+        "ties": 0,
+        "losses": 0
+      }
+    },
+    {
+      "rank": 11,
+      "label": "v8_8_6_19200k_norm",
+      "path": "models/v8_8_6_affinity_sharedweight_cuda_graph_td_19200k.pt",
+      "env_steps": 19200000,
+      "gradient_steps": 482586,
+      "interrupted": false,
+      "summary": {
+        "pieces": 1966.8,
+        "lines": 782.2,
+        "tetrises": 146.1,
+        "value": 1068580.0,
+        "reward_per_1000": 543308.9282082571,
+        "avg_height": 13.3,
+        "worst_height": 20,
+        "gameovers": 2,
+        "switch_rate": 27.70744356314826
+      },
+      "paired_vs_champion": {
+        "mean": 96905.0,
+        "lo": 59584.083240825086,
+        "hi": 134225.9167591749,
+        "wins": 19,
+        "ties": 0,
+        "losses": 1
+      }
+    }
+  ],
+  "status": "DEVELOPMENT_CONSUMED",
+  "next_predeclared_qualification_seeds": [
+    3301,
+    3302,
+    3303,
+    3304,
+    3305,
+    3306,
+    3307,
+    3308,
+    3309,
+    3310,
+    3311,
+    3312,
+    3313,
+    3314,
+    3315,
+    3316,
+    3317,
+    3318,
+    3319,
+    3320
+  ]
+}

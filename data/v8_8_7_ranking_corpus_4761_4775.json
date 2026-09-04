@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-08-31T22:36:20",
+  "status": "V8.8.7 PILOT OFFLINE RANKING CORPUS",
+  "champion": "F:\\tetris-learning-ai\\models\\v8_8_6_affinity_sharedweight_cuda_graph_td_31200k.pt",
+  "challenger": "F:\\tetris-learning-ai\\models\\v8_8_6_control_continued_td_41200k.pt",
+  "seed_spec": "4761-4775",
+  "seeds": [
+    4761,
+    4762,
+    4763,
+    4764,
+    4765,
+    4766,
+    4767,
+    4768,
+    4769,
+    4770,
+    4771,
+    4772,
+    4773,
+    4774,
+    4775
+  ],
+  "state_sources": [
+    "champion",
+    "challenger"
+  ],
+  "fixed_rollout": "F:\\tetris-learning-ai\\models\\v8_8_6_affinity_sharedweight_cuda_graph_td_31200k.pt",
+  "horizon": 100,
+  "selected_states": 40,
+  "valid_pair_labels": 228,
+  "train_states": 28,
+  "validation_states": 12,
+  "train_seeds": [
+    4762,
+    4763,
+    4764,
+    4765,
+    4766,
+    4767,
+    4768,
+    4769,
+    4771,
+    4774,
+    4775
+  ],
+  "validation_seeds": [
+    4761,
+    4770,
+    4772,
+    4773
+  ],
+  "confidence_min": 0.6,
+  "confidence_edges": [
+    0.6,
+    0.7,
+    0.8,
+    0.9,
+    0.99,
+    1.01
+  ],
+  "events_per_bin": 8,
+  "max_events_per_seed": 5,
+  "elapsed_seconds": 11640.736482299999,
+  "important": "Counterfactual branch values are not TD rewards. They are converted only into -1/0/+1 pairwise ordering labels."
+}

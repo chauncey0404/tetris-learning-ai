@@ -1,0 +1,22 @@
+{
+  "version": "V8_8_2_CUDA_GRAPH_V2",
+  "checkpoint": "models/v8_8_1_longtraj_gpu_replay_td_200k.pt",
+  "torch": "2.12.1+cu132",
+  "cuda": "13.2",
+  "gpu": "NVIDIA GeForce RTX 5070",
+  "batch_size": 8192,
+  "eager": {
+    "iterations": 256,
+    "wall_ms_per_grad": 10.787820703114903,
+    "cuda_window_ms_per_grad": 10.788106918334961,
+    "gradients_per_sec": 92.69712831909204
+  },
+  "cuda_graph": {
+    "iterations": 256,
+    "wall_ms_per_grad": 2.423860546855394,
+    "cuda_window_ms_per_grad": 2.423602819442749,
+    "gradients_per_sec": 412.5649890615012
+  },
+  "cuda_graph_error": null,
+  "speedup": 4.450677130378036
+}

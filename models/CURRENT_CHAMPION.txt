@@ -1,0 +1,30 @@
+﻿CURRENT FORMAL CHAMPION
+=======================
+
+Version:
+V8.8.6 31.2M
+
+Checkpoint:
+models\v8_8_6_affinity_sharedweight_cuda_graph_td_31200k.pt
+
+Policy gate:
+normalized 0.600
+
+Development:
+4501..4520 (CONSUMED)
+
+Formal qualification:
+3301..3320 (CONSUMED)
+
+Qualification:
+20 / 0 / 0 vs V8.8 150K
+All four promotion gates PASS.
+
+Previous Champion retained in models\:
+models\v8_8_jax_vectorized_td_150k.pt
+
+Protected final benchmark seeds:
+6..20
+
+Archive policy:
+Historical/invalid checkpoints are preserved under archive\, never deleted.

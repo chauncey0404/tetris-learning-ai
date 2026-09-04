@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "gate": "V8.8 JAX TEACHER/TOP-K PARITY",
+  "states_checked": 1250,
+  "candidates_checked": 5000,
+  "seed_start": 4201,
+  "seeds": 5,
+  "steps_per_seed": 250,
+  "top_k": 4,
+  "jax_version": "0.5.3",
+  "jax_devices": [
+    "TFRT_CPU_0"
+  ],
+  "teacher": "HEURISTIC_TEACHER_V2_1_TETRIS_POTENTIAL_I_DEPENDENCY"
+}

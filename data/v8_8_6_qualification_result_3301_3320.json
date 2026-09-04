@@ -1,0 +1,92 @@
+{
+  "purpose": "V8_8_6_FRESH_FORMAL_QUALIFICATION_RESULT",
+  "qualification_seeds": [
+    3301,
+    3302,
+    3303,
+    3304,
+    3305,
+    3306,
+    3307,
+    3308,
+    3309,
+    3310,
+    3311,
+    3312,
+    3313,
+    3314,
+    3315,
+    3316,
+    3317,
+    3318,
+    3319,
+    3320
+  ],
+  "qualification_status": "QUALIFICATION_CONSUMED",
+  "champion": {
+    "label": "champion_v8_8_150k_norm",
+    "path": "models/v8_8_jax_vectorized_td_150k.pt",
+    "gate": 0.6,
+    "summary": {
+      "pieces": 2000.0,
+      "lines": 796.3,
+      "tetrises": 93.1,
+      "value": 966190.0,
+      "r1000": 483095.0,
+      "avgH": 14.15,
+      "worstH": 16,
+      "GO": 0,
+      "switch": 26.1
+    }
+  },
+  "challenger": {
+    "label": "v8_8_6_31200k_norm",
+    "path": "models/v8_8_6_affinity_sharedweight_cuda_graph_td_31200k.pt",
+    "gate": 0.6,
+    "env_steps": 31200000,
+    "gradient_steps": 780748,
+    "summary": {
+      "pieces": 2000.0,
+      "lines": 796.3,
+      "tetrises": 154.1,
+      "value": 1099130.0,
+      "r1000": 549565.0,
+      "avgH": 12.8,
+      "worstH": 15,
+      "GO": 0,
+      "switch": 27.1625
+    }
+  },
+  "paired_diagnostics": {
+    "mean": 132940.0,
+    "lo": 118492.5585542484,
+    "hi": 147387.4414457516,
+    "wins": 20,
+    "ties": 0,
+    "losses": 0
+  },
+  "promotion_gates": [
+    {
+      "name": "Safety GO",
+      "passed": true,
+      "detail": "0 <= 0"
+    },
+    {
+      "name": "Survival pieces",
+      "passed": true,
+      "detail": "2000.00 >= 2000.00"
+    },
+    {
+      "name": "R/1000",
+      "passed": true,
+      "detail": "549565.00 > 483095.00"
+    },
+    {
+      "name": "Average value",
+      "passed": true,
+      "detail": "1099130.00 > 966190.00"
+    }
+  ],
+  "promotion_pass": true,
+  "formal_result": "PROMOTE_CHALLENGER"
+}
