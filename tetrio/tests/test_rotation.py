@@ -1,9 +1,9 @@
 from __future__ import annotations
 import unittest
 from tetrio import TETRIO_MOVEMENT, TetrioSRSPlusRotationSystem
-from tetris_ai.battle.movement import try_rotate
-from tetris_ai.battle.rotation.srs import SRSRotationSystem
-from tetris_ai.battle.types import MoveAction, PieceState
+from tetris_ai.core.movement import try_rotate
+from tetris_ai.core.rotation.srs import SRSRotationSystem
+from tetris_ai.core.types import MoveAction, PieceState
 
 class TetrioRotationTests(unittest.TestCase):
     def test_srs_plus_i_0_to_r_differs_from_standard_srs(self):

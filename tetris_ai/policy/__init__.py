@@ -1,1 +1,1 @@
-from .confidence import normalized_margin_choice, normalized_margin_actions_torch, normalized_margin_actions_top4_graphsafe
+from tetris_ai.policy.confidence import normalized_margin_choice, normalized_margin_actions_torch, normalized_margin_actions_top4_graphsafe

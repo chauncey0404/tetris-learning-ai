@@ -1,8 +1,8 @@
 from __future__ import annotations
 
-from tetris_ai.battle.rotation.base import target_rotation, y_up_to_board
-from tetris_ai.battle.rotation.srs import SRSRotationSystem, _JLSTZ_Y_UP
-from tetris_ai.battle.types import MoveAction
+from tetris_ai.core.rotation.base import target_rotation, y_up_to_board
+from tetris_ai.core.rotation.srs import SRSRotationSystem, _JLSTZ_Y_UP
+from tetris_ai.core.types import MoveAction
 
 
 _I_SRS_PLUS_90_Y_UP = {

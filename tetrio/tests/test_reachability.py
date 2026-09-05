@@ -1,8 +1,8 @@
 from __future__ import annotations
 import unittest
 from tetrio import TETRIO_MOVEMENT
-from tetris_ai.battle.reachability import enumerate_reachable_placements, unique_landing_geometries
-from tetris_ai.battle.types import MoveAction
+from tetris_ai.core.reachability import enumerate_reachable_placements, unique_landing_geometries
+from tetris_ai.core.types import MoveAction
 
 class TetrioReachabilityTests(unittest.TestCase):
     def test_board_contract(self):

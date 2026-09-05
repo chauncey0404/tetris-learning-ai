@@ -2,25 +2,19 @@ from __future__ import annotations
 
 import numpy as np
 
-from tetris_ai.battle.rules.base import MovementRuleset
-from tetris_ai.battle.spins.base import SpinKind, SpinResult, SpinSystem
-from tetris_ai.battle.spins.common import (
+from tetris_ai.core.rules.base import MovementRuleset
+from tetris_ai.core.spins.base import SpinKind, SpinResult, SpinSystem
+from tetris_ai.core.spins.common import (
     final_rotation_trace,
     is_immobile,
     t_corner_counts,
     used_fifth_90_kick,
 )
-from tetris_ai.battle.types import ReachablePlacement
+from tetris_ai.core.types import ReachablePlacement
 
 
-class TetrioAllMiniPlusSpinSystem(SpinSystem):
-    """TETR.IO All-Mini+ spin classification.
-
-    This is separate from movement so TETR.IO profiles can vary spin settings
-    without changing the shared reachability engine.
-    """
-
-    name = "TETR.IO All-Mini+"
+class _TetrioSpinBase(SpinSystem):
+    allow_immobile_t_fallback = False
 
     def classify(
         self,
@@ -66,13 +60,39 @@ class TetrioAllMiniPlusSpinSystem(SpinSystem):
                 reason="T 3-corner full" if full else "T 3-corner mini",
             )
 
+        if self.allow_immobile_t_fallback and immobile:
+            return SpinResult(
+                SpinKind.MINI,
+                state.piece,
+                lines_cleared,
+                corner_count=corners,
+                front_corner_count=front,
+                immobile=True,
+                rotation=trace,
+                reason="All-Mini+ immobile T fallback",
+            )
+
         return SpinResult(
-            SpinKind.MINI if immobile else SpinKind.NONE,
+            SpinKind.NONE,
             state.piece,
             lines_cleared,
             corner_count=corners,
             front_corner_count=front,
             immobile=immobile,
             rotation=trace,
-            reason="All-Mini+ immobile T fallback" if immobile else "T is mobile",
+            reason="T failed 3-corner rule",
         )
+
+
+class TetrioAllMiniSpinSystem(_TetrioSpinBase):
+    """Tetra League Season 2 All-Mini profile."""
+
+    name = "TETR.IO All-Mini"
+    allow_immobile_t_fallback = False
+
+
+class TetrioAllMiniPlusSpinSystem(_TetrioSpinBase):
+    """Optional TETR.IO All-Mini+ profile for modes that enable it."""
+
+    name = "TETR.IO All-Mini+"
+    allow_immobile_t_fallback = True

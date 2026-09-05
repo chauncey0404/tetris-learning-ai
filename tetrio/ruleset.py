@@ -1,9 +1,9 @@
 from __future__ import annotations
 
-from tetris_ai.battle.rules.base import MovementRuleset
-from tetris_ai.battle.rules.game import GameRuleset
+from tetris_ai.core.rules.base import MovementRuleset
+from tetris_ai.core.rules.game import GameRuleset
 from tetrio.rotation import TetrioSRSPlusRotationSystem
-from tetrio.spins import TetrioAllMiniPlusSpinSystem
+from tetrio.spins import TetrioAllMiniPlusSpinSystem, TetrioAllMiniSpinSystem
 
 
 TETRIO_MOVEMENT = MovementRuleset(
@@ -15,14 +15,24 @@ TETRIO_MOVEMENT = MovementRuleset(
     allow_180=True,
 )
 
-# Current project target. Attack/combo/B2B/garbage semantics are added in V9.2.
-TETRIO_MULTIPLAYER = GameRuleset(
+# Ranked Season 2 target. Official Season 2 notes specify All-Mini.
+TETRIO_TETRA_LEAGUE = GameRuleset(
     game_id="tetrio",
-    profile_id="current_multiplayer",
-    name="TETR.IO current multiplayer",
+    profile_id="tetra_league_season2",
+    name="TETR.IO Tetra League Season 2",
+    movement=TETRIO_MOVEMENT,
+    spins=TetrioAllMiniSpinSystem(),
+)
+
+# Optional profile for TETR.IO modes/custom settings that enable All-Mini+.
+TETRIO_ALL_MINI_PLUS = GameRuleset(
+    game_id="tetrio",
+    profile_id="all_mini_plus",
+    name="TETR.IO All-Mini+ profile",
     movement=TETRIO_MOVEMENT,
     spins=TetrioAllMiniPlusSpinSystem(),
 )
 
-# Backward-friendly movement alias for V9.0-era callers.
+# Backward-compatible project alias. V9 battle research now targets ranked TL.
+TETRIO_MULTIPLAYER = TETRIO_TETRA_LEAGUE
 TETRIO_DEFAULT = TETRIO_MOVEMENT

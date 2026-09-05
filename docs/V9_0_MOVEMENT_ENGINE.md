@@ -72,7 +72,7 @@ Those belong to later V9 phases after movement parity is established.
 Run from project root:
 
 ```bat
-.venv\Scripts\python.exe -m unittest tests.test_v9_rotation_systems tests.test_v9_reachability -v
+.venv\Scripts\python.exe -m unittest tetrio.tests.test_rotation tetrio.tests.test_reachability -v
 ```
 
 No full V8 retraining or qualification run is required because V9.0 adds a new
