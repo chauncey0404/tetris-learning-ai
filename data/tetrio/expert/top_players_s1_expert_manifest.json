@@ -1,0 +1,125 @@
+{
+  "source": {
+    "path": "data\\tetrio\\processed\\top_players_s1.parquet",
+    "rows": 7716524,
+    "games": 76692
+  },
+  "corpus": {
+    "transitions_with_previous_state": 7639832,
+    "unique_hold_rows": 7369615,
+    "ambiguous_hold_rows": 270180,
+    "unmatched_rows": 38,
+    "classified_rows": 7639795,
+    "classification_rate": 0.9999951569615667
+  },
+  "split": {
+    "seed": 20260905,
+    "train_pct": 90,
+    "val_pct": 5,
+    "test_pct": 5,
+    "method": "deterministic hash bucket by game_id",
+    "overlap_train_val_games": 0,
+    "overlap_train_test_games": 0,
+    "overlap_val_test_games": 0
+  },
+  "files": {
+    "train": {
+      "path": "data\\tetrio\\expert\\top_players_s1_train.parquet",
+      "rows": 6625594,
+      "games": 69028,
+      "bytes": 133559113
+    },
+    "val": {
+      "path": "data\\tetrio\\expert\\top_players_s1_val.parquet",
+      "rows": 360799,
+      "games": 3738,
+      "bytes": 7533506
+    },
+    "test": {
+      "path": "data\\tetrio\\expert\\top_players_s1_test.parquet",
+      "rows": 383222,
+      "games": 3924,
+      "bytes": 7995549
+    },
+    "ambiguous": {
+      "path": "data\\tetrio\\expert\\top_players_s1_ambiguous_hold.parquet",
+      "rows": 270180,
+      "games": 66969,
+      "bytes": 10050484
+    },
+    "unmatched": {
+      "path": "data\\tetrio\\expert\\top_players_s1_unmatched.parquet",
+      "rows": 38,
+      "games": 36,
+      "bytes": 9253
+    }
+  },
+  "validated_state_columns": [
+    "board_before",
+    "active_piece",
+    "hold_piece",
+    "preview_queue"
+  ],
+  "expert_action_columns": [
+    "placed_piece",
+    "final_x",
+    "final_y",
+    "final_rotation",
+    "use_hold",
+    "hold_label_valid"
+  ],
+  "metadata_not_model_input": [
+    "game_id",
+    "subframe",
+    "won",
+    "rating",
+    "glicko",
+    "glicko_rd"
+  ],
+  "raw_or_post_action_columns_not_validated_as_state_input": [
+    "outcome_cleared",
+    "outcome_garbage_cleared",
+    "outcome_attack",
+    "outcome_t_spin",
+    "raw_btb",
+    "raw_combo",
+    "raw_immediate_garbage",
+    "raw_incoming_garbage"
+  ],
+  "mapping_notes": {
+    "dataset_J_to_canonical": "L",
+    "dataset_L_to_canonical": "J",
+    "rotation": "N/E/S/W -> 0/1/2/3 clockwise",
+    "I_origin": {
+      "N": {
+        "x_offset": -1,
+        "y_base": 38
+      },
+      "E": {
+        "x_offset": -2,
+        "y_base": 38
+      },
+      "S": {
+        "x_offset": -2,
+        "y_base": 37
+      },
+      "W": {
+        "x_offset": -1,
+        "y_base": 37
+      }
+    },
+    "O_N_origin": {
+      "x_offset": 0,
+      "y_base": 38
+    },
+    "TSZJL_origin": {
+      "x_offset": -1,
+      "y_base": 38
+    }
+  },
+  "build": {
+    "threads": 20,
+    "seconds": 31.570889700000407,
+    "status": "PASS"
+  }
+}

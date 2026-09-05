@@ -1,0 +1,12 @@
+{
+  "source_csv": "data\\tetrio\\raw\\data.csv",
+  "source_rows": 7716524,
+  "parquet": "data\\tetrio\\processed\\top_players_s1.parquet",
+  "parquet_rows": 7716524,
+  "parquet_bytes": 145077915,
+  "compression": "zstd",
+  "row_group_size": 262144,
+  "threads": 20,
+  "convert_seconds": 3.0154573999971035,
+  "status": "PASS"
+}

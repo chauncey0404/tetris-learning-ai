@@ -1,0 +1,273 @@
+{
+  "source": {
+    "path": "data\\tetrio\\raw\\data.csv",
+    "bytes": 1491571273,
+    "schema": [
+      "game_id",
+      "subframe",
+      "won",
+      "playfield",
+      "x",
+      "y",
+      "r",
+      "placed",
+      "hold",
+      "next",
+      "cleared",
+      "garbage_cleared",
+      "attack",
+      "t_spin",
+      "btb",
+      "combo",
+      "immediate_garbage",
+      "incoming_garbage",
+      "rating",
+      "glicko",
+      "glicko_rd"
+    ]
+  },
+  "execution": {
+    "threads": 20,
+    "profile_seconds": 9.35111980000147
+  },
+  "overview": {
+    "rows": 7716524,
+    "games": 76692,
+    "min_game_id": 1,
+    "max_game_id": 124032,
+    "min_subframe": 0,
+    "max_subframe": 148666,
+    "min_x": 0,
+    "max_x": 9,
+    "min_y": 0,
+    "max_y": 24,
+    "min_cleared": 0,
+    "max_cleared": 4,
+    "min_garbage_cleared": 0,
+    "max_garbage_cleared": 0,
+    "min_attack": 0.0,
+    "max_attack": 22.0,
+    "min_btb": 0,
+    "max_btb": 54,
+    "min_combo": 0,
+    "max_combo": 21,
+    "min_immediate_garbage": 0.0,
+    "max_immediate_garbage": 78.0,
+    "min_incoming_garbage": 0.0,
+    "max_incoming_garbage": 78.0,
+    "min_playfield_len": 1,
+    "max_playfield_len": 328,
+    "avg_playfield_len": 88.49379986955931,
+    "min_next_len": 14,
+    "max_next_len": 14,
+    "avg_next_len": 14.0
+  },
+  "per_game": {
+    "min_rows_per_game": 1,
+    "max_rows_per_game": 745,
+    "avg_rows_per_game": 100.61706566525844,
+    "median_rows_per_game": 75.0
+  },
+  "rating": {
+    "min_rating": 24698.078125,
+    "avg_rating": 24899.550588706872,
+    "median_rating": 24927.775390625,
+    "max_rating": 24999.521484375,
+    "p05_rating": 24724.658203125,
+    "p25_rating": 24840.689453125,
+    "p75_rating": 24971.826171875,
+    "p95_rating": 24993.935546875,
+    "min_glicko": 2653.467041015625,
+    "avg_glicko": 3093.3249607254907,
+    "max_glicko": 4373.419921875,
+    "min_glicko_rd": 59.60514831542969,
+    "avg_glicko_rd": 66.63968019595453,
+    "max_glicko_rd": 99.66458129882812
+  },
+  "distributions": {
+    "won": [
+      {
+        "value": 1,
+        "rows": 4274700
+      },
+      {
+        "value": 0,
+        "rows": 3441824
+      }
+    ],
+    "r": [
+      {
+        "value": "N",
+        "rows": 2637964
+      },
+      {
+        "value": "E",
+        "rows": 2321073
+      },
+      {
+        "value": "W",
+        "rows": 1593082
+      },
+      {
+        "value": "S",
+        "rows": 1164405
+      }
+    ],
+    "placed": [
+      {
+        "value": "O",
+        "rows": 1105317
+      },
+      {
+        "value": "S",
+        "rows": 1104070
+      },
+      {
+        "value": "J",
+        "rows": 1103997
+      },
+      {
+        "value": "Z",
+        "rows": 1103979
+      },
+      {
+        "value": "L",
+        "rows": 1103975
+      },
+      {
+        "value": "T",
+        "rows": 1098312
+      },
+      {
+        "value": "I",
+        "rows": 1096874
+      }
+    ],
+    "hold": [
+      {
+        "value": "T",
+        "rows": 1835705
+      },
+      {
+        "value": "I",
+        "rows": 1648294
+      },
+      {
+        "value": "Z",
+        "rows": 865654
+      },
+      {
+        "value": "S",
+        "rows": 857979
+      },
+      {
+        "value": "L",
+        "rows": 819607
+      },
+      {
+        "value": "J",
+        "rows": 808745
+      },
+      {
+        "value": "O",
+        "rows": 750829
+      },
+      {
+        "value": "N",
+        "rows": 129711
+      }
+    ],
+    "t_spin": [
+      {
+        "value": "N",
+        "rows": 7150022
+      },
+      {
+        "value": "F",
+        "rows": 527604
+      },
+      {
+        "value": "M",
+        "rows": 38898
+      }
+    ],
+    "cleared": [
+      {
+        "value": 0,
+        "rows": 5587295
+      },
+      {
+        "value": 1,
+        "rows": 958295
+      },
+      {
+        "value": 2,
+        "rows": 690330
+      },
+      {
+        "value": 4,
+        "rows": 381767
+      },
+      {
+        "value": 3,
+        "rows": 98837
+      }
+    ]
+  },
+  "null_counts": {
+    "game_id": 0,
+    "subframe": 0,
+    "won": 0,
+    "playfield": 93136,
+    "x": 0,
+    "y": 0,
+    "r": 0,
+    "placed": 0,
+    "hold": 0,
+    "next": 0,
+    "cleared": 0,
+    "garbage_cleared": 0,
+    "attack": 0,
+    "t_spin": 0,
+    "btb": 0,
+    "combo": 0,
+    "immediate_garbage": 0,
+    "incoming_garbage": 0,
+    "rating": 0,
+    "glicko": 0,
+    "glicko_rd": 0
+  },
+  "ordering_diagnostics": {
+    "within_game_subframe_regressions": 0
+  },
+  "usage_notes": {
+    "source_era": "Treat as historical expert-play data unless independently verified otherwise.",
+    "input_candidate_fields_to_review": [
+      "playfield",
+      "hold",
+      "next",
+      "incoming_garbage",
+      "immediate_garbage",
+      "btb",
+      "combo"
+    ],
+    "action_label_fields_to_review": [
+      "placed",
+      "x",
+      "y",
+      "r"
+    ],
+    "post_action_or_future_fields_do_not_use_as_model_input_without_proof": [
+      "won",
+      "cleared",
+      "garbage_cleared",
+      "attack",
+      "t_spin"
+    ],
+    "player_skill_metadata": [
+      "rating",
+      "glicko",
+      "glicko_rd"
+    ]
+  }
+}

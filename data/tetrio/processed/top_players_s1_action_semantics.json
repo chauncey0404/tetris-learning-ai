@@ -1,0 +1,511 @@
+{
+  "metadata": {
+    "input": "data\\tetrio\\processed\\top_players_s1.parquet",
+    "sampled_games": 5000,
+    "sampled_rows": 500573,
+    "seed": 20260905,
+    "load_seconds": 0.7135242999938782,
+    "hypothesis": "row hold/next are post-placement state; the next row's active piece begins at previous row next[0]"
+  },
+  "counts": {
+    "transitions": 495573,
+    "unique": 478048,
+    "no_hold": 280398,
+    "hold_empty": 3015,
+    "hold_swap": 194635,
+    "ambiguous": 17523,
+    "unmatched": 2,
+    "unmatched_but_queue_plausible": 2
+  },
+  "rates": {
+    "classified": 0.9999959642676256,
+    "unique": 0.9646368950689403,
+    "ambiguous": 0.03535906919868516,
+    "unmatched": 4.035732374443321e-06
+  },
+  "by_placed_piece": {
+    "O": {
+      "no_hold": 44030,
+      "hold_swap": 24865,
+      "hold_empty": 458
+    },
+    "I": {
+      "hold_empty": 458,
+      "hold_swap": 33842,
+      "no_hold": 31056
+    },
+    "S": {
+      "no_hold": 43594,
+      "hold_swap": 25352,
+      "hold_empty": 459
+    },
+    "L": {
+      "no_hold": 43980,
+      "hold_swap": 24586,
+      "hold_empty": 451
+    },
+    "J": {
+      "no_hold": 43981,
+      "hold_swap": 24408,
+      "hold_empty": 470
+    },
+    "T": {
+      "hold_swap": 35925,
+      "no_hold": 30468,
+      "hold_empty": 212
+    },
+    "Z": {
+      "no_hold": 43289,
+      "hold_swap": 25657,
+      "hold_empty": 507
+    }
+  },
+  "unmatched_examples": [
+    {
+      "game_id": 55830,
+      "prev_subframe": 65200,
+      "subframe": 65983,
+      "prev_hold": "O",
+      "prev_next": "TIJOTZOIJLSISO",
+      "placed": "I",
+      "cur_hold": "T",
+      "cur_next": "JOTZOIJLSISOZT",
+      "active_piece_hypothesis": "T",
+      "reason": "no standard mode matched (queue consume1=False, consume2=True)"
+    },
+    {
+      "game_id": 116213,
+      "prev_subframe": 37197,
+      "subframe": 38594,
+      "prev_hold": "T",
+      "prev_next": "ILZOIJTZSLTJOL",
+      "placed": "I",
+      "cur_hold": "L",
+      "cur_next": "ZOIJTZSLTJOLSI",
+      "active_piece_hypothesis": "I",
+      "reason": "no standard mode matched (queue consume1=False, consume2=True)"
+    }
+  ],
+  "ambiguous_examples": [
+    {
+      "game_id": 75,
+      "prev_subframe": 9823,
+      "subframe": 9981,
+      "prev_hold": "J",
+      "prev_next": "JTLZOZJOLITSIO",
+      "placed": "J",
+      "cur_hold": "J",
+      "cur_next": "TLZOZJOLITSIOJ",
+      "modes": [
+        "no_hold",
+        "hold_swap"
+      ]
+    },
+    {
+      "game_id": 75,
+      "prev_subframe": 21791,
+      "subframe": 21961,
+      "prev_hold": "I",
+      "prev_next": "IOSZZLJITOSZTL",
+      "placed": "I",
+      "cur_hold": "I",
+      "cur_next": "OSZZLJITOSZTLO",
+      "modes": [
+        "no_hold",
+        "hold_swap"
+      ]
+    },
+    {
+      "game_id": 81,
+      "prev_subframe": 2978,
+      "subframe": 3107,
+      "prev_hold": "T",
+      "prev_next": "TOZJIJLZTSOLJI",
+      "placed": "T",
+      "cur_hold": "T",
+      "cur_next": "OZJIJLZTSOLJIS",
+      "modes": [
+        "no_hold",
+        "hold_swap"
+      ]
+    },
+    {
+      "game_id": 114,
+      "prev_subframe": 1035,
+      "subframe": 1317,
+      "prev_hold": "T",
+      "prev_next": "TSOLJIZJTIZLOS",
+      "placed": "T",
+      "cur_hold": "T",
+      "cur_next": "SOLJIZJTIZLOSZ",
+      "modes": [
+        "no_hold",
+        "hold_swap"
+      ]
+    },
+    {
+      "game_id": 114,
+      "prev_subframe": 12650,
+      "subframe": 13077,
+      "prev_hold": "T",
+      "prev_next": "TIZLOJZTJOILSJ",
+      "placed": "T",
+      "cur_hold": "T",
+      "cur_next": "IZLOJZTJOILSJT",
+      "modes": [
+        "no_hold",
+        "hold_swap"
+      ]
+    },
+    {
+      "game_id": 161,
+      "prev_subframe": 795,
+      "subframe": 960,
+      "prev_hold": "T",
+      "prev_next": "TZJOISLZJLIOTS",
+      "placed": "T",
+      "cur_hold": "T",
+      "cur_next": "ZJOISLZJLIOTSS",
+      "modes": [
+        "no_hold",
+        "hold_swap"
+      ]
+    },
+    {
+      "game_id": 161,
+      "prev_subframe": 8852,
+      "subframe": 8967,
+      "prev_hold": "I",
+      "prev_next": "ISZTSJOITZLTOJ",
+      "placed": "I",
+      "cur_hold": "I",
+      "cur_next": "SZTSJOITZLTOJS",
+      "modes": [
+        "no_hold",
+        "hold_swap"
+      ]
+    },
+    {
+      "game_id": 161,
+      "prev_subframe": 10647,
+      "subframe": 10772,
+      "prev_hold": "T",
+      "prev_next": "TOJSIZLOZITSJL",
+      "placed": "T",
+      "cur_hold": "T",
+      "cur_next": "OJSIZLOZITSJLL",
+      "modes": [
+        "no_hold",
+        "hold_swap"
+      ]
+    },
+    {
+      "game_id": 161,
+      "prev_subframe": 13406,
+      "subframe": 13573,
+      "prev_hold": "L",
+      "prev_next": "LSOJTZIOSZJLIT",
+      "placed": "L",
+      "cur_hold": "L",
+      "cur_next": "SOJTZIOSZJLITI",
+      "modes": [
+        "no_hold",
+        "hold_swap"
+      ]
+    },
+    {
+      "game_id": 161,
+      "prev_subframe": 15442,
+      "subframe": 15571,
+      "prev_hold": "I",
+      "prev_next": "ISTOZLJJTIOZSL",
+      "placed": "I",
+      "cur_hold": "I",
+      "cur_next": "STOZLJJTIOZSLI",
+      "modes": [
+        "no_hold",
+        "hold_swap"
+      ]
+    },
+    {
+      "game_id": 161,
+      "prev_subframe": 16373,
+      "subframe": 16546,
+      "prev_hold": "J",
+      "prev_next": "JTIOZSLITOLJZS",
+      "placed": "J",
+      "cur_hold": "J",
+      "cur_next": "TIOZSLITOLJZSL",
+      "modes": [
+        "no_hold",
+        "hold_swap"
+      ]
+    },
+    {
+      "game_id": 205,
+      "prev_subframe": 9238,
+      "subframe": 9433,
+      "prev_hold": "S",
+      "prev_next": "STOZLJTJLOIZST",
+      "placed": "S",
+      "cur_hold": "S",
+      "cur_next": "TOZLJTJLOIZSTL",
+      "modes": [
+        "no_hold",
+        "hold_swap"
+      ]
+    },
+    {
+      "game_id": 205,
+      "prev_subframe": 14603,
+      "subframe": 14723,
+      "prev_hold": "S",
+      "prev_next": "STJLIJSTZLOILT",
+      "placed": "S",
+      "cur_hold": "S",
+      "cur_next": "TJLIJSTZLOILTO",
+      "modes": [
+        "no_hold",
+        "hold_swap"
+      ]
+    },
+    {
+      "game_id": 226,
+      "prev_subframe": 5650,
+      "subframe": 5840,
+      "prev_hold": "I",
+      "prev_next": "IZOTLJSJZITOLS",
+      "placed": "I",
+      "cur_hold": "I",
+      "cur_next": "ZOTLJSJZITOLSO",
+      "modes": [
+        "no_hold",
+        "hold_swap"
+      ]
+    },
+    {
+      "game_id": 233,
+      "prev_subframe": 4770,
+      "subframe": 5050,
+      "prev_hold": "J",
+      "prev_next": "JSLZITZOJLISTS",
+      "placed": "J",
+      "cur_hold": "J",
+      "cur_next": "SLZITZOJLISTST",
+      "modes": [
+        "no_hold",
+        "hold_swap"
+      ]
+    },
+    {
+      "game_id": 233,
+      "prev_subframe": 7474,
+      "subframe": 8340,
+      "prev_hold": "I",
+      "prev_next": "ISTSTIZLOJZIJS",
+      "placed": "I",
+      "cur_hold": "I",
+      "cur_next": "STSTIZLOJZIJSO",
+      "modes": [
+        "no_hold",
+        "hold_swap"
+      ]
+    },
+    {
+      "game_id": 233,
+      "prev_subframe": 8860,
+      "subframe": 9080,
+      "prev_hold": "S",
+      "prev_next": "STIZLOJZIJSOTL",
+      "placed": "S",
+      "cur_hold": "S",
+      "cur_next": "TIZLOJZIJSOTLI",
+      "modes": [
+        "no_hold",
+        "hold_swap"
+      ]
+    },
+    {
+      "game_id": 233,
+      "prev_subframe": 28432,
+      "subframe": 28620,
+      "prev_hold": "I",
+      "prev_next": "ISJTZLZJLITOSZ",
+      "placed": "I",
+      "cur_hold": "I",
+      "cur_next": "SJTZLZJLITOSZL",
+      "modes": [
+        "no_hold",
+        "hold_swap"
+      ]
+    },
+    {
+      "game_id": 259,
+      "prev_subframe": 10616,
+      "subframe": 10894,
+      "prev_hold": "O",
+      "prev_next": "OJSLZJZOSITLJO",
+      "placed": "O",
+      "cur_hold": "O",
+      "cur_next": "JSLZJZOSITLJOI",
+      "modes": [
+        "no_hold",
+        "hold_swap"
+      ]
+    },
+    {
+      "game_id": 259,
+      "prev_subframe": 12085,
+      "subframe": 12274,
+      "prev_hold": "Z",
+      "prev_next": "ZOSITLJOITSLZS",
+      "placed": "Z",
+      "cur_hold": "Z",
+      "cur_next": "OSITLJOITSLZSZ",
+      "modes": [
+        "no_hold",
+        "hold_swap"
+      ]
+    },
+    {
+      "game_id": 259,
+      "prev_subframe": 19064,
+      "subframe": 19221,
+      "prev_hold": "I",
+      "prev_next": "ISZTOZIJTLOSLT",
+      "placed": "I",
+      "cur_hold": "I",
+      "cur_next": "SZTOZIJTLOSLTJ",
+      "modes": [
+        "no_hold",
+        "hold_swap"
+      ]
+    },
+    {
+      "game_id": 259,
+      "prev_subframe": 26287,
+      "subframe": 26479,
+      "prev_hold": "L",
+      "prev_next": "LSOJZITLZJSITO",
+      "placed": "L",
+      "cur_hold": "L",
+      "cur_next": "SOJZITLZJSITOO",
+      "modes": [
+        "no_hold",
+        "hold_swap"
+      ]
+    },
+    {
+      "game_id": 259,
+      "prev_subframe": 42545,
+      "subframe": 42914,
+      "prev_hold": "I",
+      "prev_next": "IJZTLSOSJOZTIL",
+      "placed": "I",
+      "cur_hold": "I",
+      "cur_next": "JZTLSOSJOZTILJ",
+      "modes": [
+        "no_hold",
+        "hold_swap"
+      ]
+    },
+    {
+      "game_id": 259,
+      "prev_subframe": 44746,
+      "subframe": 44977,
+      "prev_hold": "O",
+      "prev_next": "OZTILJTSOILZTL",
+      "placed": "O",
+      "cur_hold": "O",
+      "cur_next": "ZTILJTSOILZTLO",
+      "modes": [
+        "no_hold",
+        "hold_swap"
+      ]
+    },
+    {
+      "game_id": 261,
+      "prev_subframe": 8412,
+      "subframe": 8604,
+      "prev_hold": "Z",
+      "prev_next": "ZSTJZOILSZTIOL",
+      "placed": "Z",
+      "cur_hold": "Z",
+      "cur_next": "STJZOILSZTIOLJ",
+      "modes": [
+        "no_hold",
+        "hold_swap"
+      ]
+    },
+    {
+      "game_id": 261,
+      "prev_subframe": 9225,
+      "subframe": 9655,
+      "prev_hold": "Z",
+      "prev_next": "ZOILSZTIOLJZOI",
+      "placed": "Z",
+      "cur_hold": "Z",
+      "cur_next": "OILSZTIOLJZOIL",
+      "modes": [
+        "no_hold",
+        "hold_swap"
+      ]
+    },
+    {
+      "game_id": 261,
+      "prev_subframe": 10855,
+      "subframe": 11005,
+      "prev_hold": "I",
+      "prev_next": "IOLJZOILJTSTJZ",
+      "placed": "I",
+      "cur_hold": "I",
+      "cur_next": "OLJZOILJTSTJZL",
+      "modes": [
+        "no_hold",
+        "hold_swap"
+      ]
+    },
+    {
+      "game_id": 261,
+      "prev_subframe": 11835,
+      "subframe": 12043,
+      "prev_hold": "I",
+      "prev_next": "ILJTSTJZLIOSOL",
+      "placed": "I",
+      "cur_hold": "I",
+      "cur_next": "LJTSTJZLIOSOLZ",
+      "modes": [
+        "no_hold",
+        "hold_swap"
+      ]
+    },
+    {
+      "game_id": 261,
+      "prev_subframe": 24706,
+      "subframe": 25131,
+      "prev_hold": "T",
+      "prev_next": "TZLSIOSOZJILTJ",
+      "placed": "T",
+      "cur_hold": "T",
+      "cur_next": "ZLSIOSOZJILTJO",
+      "modes": [
+        "no_hold",
+        "hold_swap"
+      ]
+    },
+    {
+      "game_id": 300,
+      "prev_subframe": 3456,
+      "subframe": 3757,
+      "prev_hold": "T",
+      "prev_next": "TOILJSZZOJILTS",
+      "placed": "T",
+      "cur_hold": "T",
+      "cur_next": "OILJSZZOJILTSJ",
+      "modes": [
+        "no_hold",
+        "hold_swap"
+      ]
+    }
+  ]
+}

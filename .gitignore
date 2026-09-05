@@ -31,6 +31,6 @@ desktop.ini
 # Generated experiment outputs
 artifacts/
 
+# Local TETR.IO datasets
 data/tetrio/raw/
-data/tetrio/processed/*.parquet
-data/tetrio/processed/*.npzdata/tetrio/expert/*.parquet
+data/tetrio/**/*.parquet

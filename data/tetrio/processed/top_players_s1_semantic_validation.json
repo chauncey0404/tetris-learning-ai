@@ -1,0 +1,298 @@
+{
+  "metadata": {
+    "input": "data\\tetrio\\processed\\top_players_s1.parquet",
+    "sampled_games": 5000,
+    "sampled_rows": 500573,
+    "seed": 20260905,
+    "load_seconds": 2.404192399997555,
+    "eval_seconds": 23.37856539999484
+  },
+  "counts": {
+    "transitions": 495573,
+    "legal": 495573,
+    "clear_match": 495573,
+    "board_exact": 457725,
+    "quiet": 338503,
+    "quiet_exact": 338502
+  },
+  "rates": {
+    "mapped": 1.0,
+    "legal_given_mapped": 1.0,
+    "clear_match_given_legal": 1.0,
+    "board_exact_given_legal": 0.9236278005460345,
+    "quiet_exact": 0.9999970458164329
+  },
+  "per_piece": {
+    "Z": {
+      "transitions": 70843,
+      "legal": 70843,
+      "clear_match": 70843,
+      "board_exact": 64745,
+      "quiet": 49003,
+      "quiet_exact": 49003
+    },
+    "O": {
+      "transitions": 70873,
+      "legal": 70873,
+      "clear_match": 70873,
+      "board_exact": 63849,
+      "quiet": 49626,
+      "quiet_exact": 49625
+    },
+    "I": {
+      "transitions": 70554,
+      "legal": 70554,
+      "clear_match": 70554,
+      "board_exact": 67279,
+      "quiet": 47571,
+      "quiet_exact": 47571
+    },
+    "S": {
+      "transitions": 70817,
+      "legal": 70817,
+      "clear_match": 70817,
+      "board_exact": 64876,
+      "quiet": 49203,
+      "quiet_exact": 49203
+    },
+    "L": {
+      "transitions": 70938,
+      "legal": 70938,
+      "clear_match": 70938,
+      "board_exact": 64956,
+      "quiet": 48562,
+      "quiet_exact": 48562
+    },
+    "J": {
+      "transitions": 70939,
+      "legal": 70939,
+      "clear_match": 70939,
+      "board_exact": 64854,
+      "quiet": 48589,
+      "quiet_exact": 48589
+    },
+    "T": {
+      "transitions": 70609,
+      "legal": 70609,
+      "clear_match": 70609,
+      "board_exact": 67166,
+      "quiet": 45949,
+      "quiet_exact": 45949
+    }
+  },
+  "per_piece_orientation": {
+    "Z-W": {
+      "transitions": 11431,
+      "legal": 11431,
+      "clear_match": 11431,
+      "board_exact": 10404,
+      "quiet": 7643,
+      "quiet_exact": 7643
+    },
+    "O-N": {
+      "transitions": 70873,
+      "legal": 70873,
+      "clear_match": 70873,
+      "board_exact": 63849,
+      "quiet": 49626,
+      "quiet_exact": 49625
+    },
+    "I-N": {
+      "transitions": 6438,
+      "legal": 6438,
+      "clear_match": 6438,
+      "board_exact": 6013,
+      "quiet": 4901,
+      "quiet_exact": 4901
+    },
+    "S-N": {
+      "transitions": 25860,
+      "legal": 25860,
+      "clear_match": 25860,
+      "board_exact": 23599,
+      "quiet": 18378,
+      "quiet_exact": 18378
+    },
+    "L-W": {
+      "transitions": 16580,
+      "legal": 16580,
+      "clear_match": 16580,
+      "board_exact": 14930,
+      "quiet": 11380,
+      "quiet_exact": 11380
+    },
+    "J-N": {
+      "transitions": 16059,
+      "legal": 16059,
+      "clear_match": 16059,
+      "board_exact": 14589,
+      "quiet": 11361,
+      "quiet_exact": 11361
+    },
+    "T-S": {
+      "transitions": 37394,
+      "legal": 37394,
+      "clear_match": 37394,
+      "board_exact": 36618,
+      "quiet": 24803,
+      "quiet_exact": 24803
+    },
+    "Z-N": {
+      "transitions": 28687,
+      "legal": 28687,
+      "clear_match": 28687,
+      "board_exact": 26331,
+      "quiet": 20720,
+      "quiet_exact": 20720
+    },
+    "J-E": {
+      "transitions": 18859,
+      "legal": 18859,
+      "clear_match": 18859,
+      "board_exact": 16971,
+      "quiet": 13277,
+      "quiet_exact": 13277
+    },
+    "I-W": {
+      "transitions": 22678,
+      "legal": 22678,
+      "clear_match": 22678,
+      "board_exact": 21699,
+      "quiet": 14801,
+      "quiet_exact": 14801
+    },
+    "S-W": {
+      "transitions": 17038,
+      "legal": 17038,
+      "clear_match": 17038,
+      "board_exact": 15621,
+      "quiet": 11784,
+      "quiet_exact": 11784
+    },
+    "Z-E": {
+      "transitions": 29412,
+      "legal": 29412,
+      "clear_match": 29412,
+      "board_exact": 26857,
+      "quiet": 19848,
+      "quiet_exact": 19848
+    },
+    "S-E": {
+      "transitions": 26448,
+      "legal": 26448,
+      "clear_match": 26448,
+      "board_exact": 24337,
+      "quiet": 18163,
+      "quiet_exact": 18163
+    },
+    "L-N": {
+      "transitions": 16683,
+      "legal": 16683,
+      "clear_match": 16683,
+      "board_exact": 15093,
+      "quiet": 11813,
+      "quiet_exact": 11813
+    },
+    "Z-S": {
+      "transitions": 1313,
+      "legal": 1313,
+      "clear_match": 1313,
+      "board_exact": 1153,
+      "quiet": 792,
+      "quiet_exact": 792
+    },
+    "L-E": {
+      "transitions": 19988,
+      "legal": 19988,
+      "clear_match": 19988,
+      "board_exact": 18705,
+      "quiet": 13269,
+      "quiet_exact": 13269
+    },
+    "I-E": {
+      "transitions": 41245,
+      "legal": 41245,
+      "clear_match": 41245,
+      "board_exact": 39395,
+      "quiet": 27766,
+      "quiet_exact": 27766
+    },
+    "J-S": {
+      "transitions": 16680,
+      "legal": 16680,
+      "clear_match": 16680,
+      "board_exact": 15198,
+      "quiet": 11238,
+      "quiet_exact": 11238
+    },
+    "L-S": {
+      "transitions": 17687,
+      "legal": 17687,
+      "clear_match": 17687,
+      "board_exact": 16228,
+      "quiet": 12100,
+      "quiet_exact": 12100
+    },
+    "T-W": {
+      "transitions": 13864,
+      "legal": 13864,
+      "clear_match": 13864,
+      "board_exact": 12830,
+      "quiet": 8735,
+      "quiet_exact": 8735
+    },
+    "J-W": {
+      "transitions": 19341,
+      "legal": 19341,
+      "clear_match": 19341,
+      "board_exact": 18096,
+      "quiet": 12713,
+      "quiet_exact": 12713
+    },
+    "T-N": {
+      "transitions": 4922,
+      "legal": 4922,
+      "clear_match": 4922,
+      "board_exact": 4359,
+      "quiet": 3136,
+      "quiet_exact": 3136
+    },
+    "I-S": {
+      "transitions": 193,
+      "legal": 193,
+      "clear_match": 193,
+      "board_exact": 172,
+      "quiet": 103,
+      "quiet_exact": 103
+    },
+    "T-E": {
+      "transitions": 14429,
+      "legal": 14429,
+      "clear_match": 14429,
+      "board_exact": 13359,
+      "quiet": 9275,
+      "quiet_exact": 9275
+    },
+    "S-S": {
+      "transitions": 1471,
+      "legal": 1471,
+      "clear_match": 1471,
+      "board_exact": 1319,
+      "quiet": 878,
+      "quiet_exact": 878
+    }
+  },
+  "unmapped": {},
+  "examples": [
+    {
+      "game_id": 116213,
+      "subframe": 37197,
+      "piece": "O",
+      "rotation": "N",
+      "canonical_piece": "O",
+      "x": 2,
+      "y": 5,
+      "board_diff_cells": 4
+    }
+  ]
+}
