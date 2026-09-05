@@ -25,11 +25,11 @@ try:
 except ImportError as exc:
     raise RuntimeError(
         "This tool requires tools\\watch_models.py and should be placed at "
-        "F:\\tetris-learning-ai\\tools\\compare_v8_8_6_31m_vs_41m_fresh.py"
+        "F:\\tetris-learning-ai\\tools\\compare_models_fresh.py"
     ) from exc
 
-CHAMPION = r"models\v8_8_6_affinity_sharedweight_cuda_graph_td_31200k.pt"
-CHALLENGER = r"models\v8_8_6_control_continued_td_41200k.pt"
+DEFAULT_BASELINE = r"models\v8_8_6_affinity_sharedweight_cuda_graph_td_31200k.pt"
+DEFAULT_CHALLENGER = r"models\v8_8_6_control_continued_td_41200k.pt"
 PROTECTED_FINAL_SEEDS = set(range(6, 21))
 
 
@@ -181,12 +181,30 @@ def write_csv(path, rows):
         writer.writerows(data)
 
 
+def safe_slug(text: str) -> str:
+    chars = []
+    for ch in text.strip().lower():
+        if ch.isalnum():
+            chars.append(ch)
+        elif chars and chars[-1] != "_":
+            chars.append("_")
+    return "".join(chars).strip("_") or "model"
+
+
 def main():
     p = argparse.ArgumentParser(
-        description="Fresh development comparison: 31.2M Champion vs 41.2M same-recipe control."
+        description="Fresh paired whole-game comparison between two Tetris AI checkpoints."
     )
-    p.add_argument("--champion", default=CHAMPION)
-    p.add_argument("--challenger", default=CHALLENGER)
+    p.add_argument(
+        "--baseline",
+        "--champion",
+        dest="baseline",
+        default=DEFAULT_BASELINE,
+        help="Baseline checkpoint. --champion is kept as a compatibility alias.",
+    )
+    p.add_argument("--challenger", default=DEFAULT_CHALLENGER)
+    p.add_argument("--baseline-label", default="Baseline")
+    p.add_argument("--challenger-label", default="Challenger")
     p.add_argument("--seeds", default="4741-4760")
     p.add_argument("--max-pieces", type=int, default=5000)
     p.add_argument("--top-k", type=int, default=4)
@@ -201,73 +219,77 @@ def main():
     if protected and not args.allow_protected_seeds:
         raise SystemExit(f"Protected final-report seeds blocked: {protected}")
 
-    champion_path = PROJECT_ROOT / args.champion
+    baseline_path = PROJECT_ROOT / args.baseline
     challenger_path = PROJECT_ROOT / args.challenger
-    if not champion_path.is_file():
-        raise SystemExit(f"Missing champion: {champion_path}")
+    if not baseline_path.is_file():
+        raise SystemExit(f"Missing baseline: {baseline_path}")
     if not challenger_path.is_file():
         raise SystemExit(f"Missing challenger: {challenger_path}")
 
     device = choose_device(args.device)
     teacher = HeuristicTeacherV2()
-    champion_policy = load_policy(
-        str(champion_path),
-        label="31.2M Champion",
+    baseline_policy = load_policy(
+        str(baseline_path),
+        label=args.baseline_label,
         device=device,
         gate_override=args.gate,
         semantics_override="normalized_q_margin",
     )
     challenger_policy = load_policy(
         str(challenger_path),
-        label="41.2M Control",
+        label=args.challenger_label,
         device=device,
         gate_override=args.gate,
         semantics_override="normalized_q_margin",
     )
 
     print("=" * 108)
-    print("31.2M CHAMPION vs 41.2M SAME-RECIPE CONTROL — FRESH DEVELOPMENT")
+    print(f"{args.baseline_label} vs {args.challenger_label} — FRESH DEVELOPMENT")
     print("=" * 108)
+    print("Baseline:", args.baseline)
+    print("Challenger:", args.challenger)
     print("Seeds:", args.seeds)
     print("Piece cap:", args.max_pieces)
     print("Device:", device)
     print("Gate:", f"{args.gate:.3f}")
     print()
 
-    champ_rows, chall_rows, pairs = [], [], []
+    baseline_rows, challenger_rows, pairs = [], [], []
     started = time.perf_counter()
 
     for i, seed in enumerate(seeds, 1):
-        c = run_one(champion_policy, teacher, device, seed, args.max_pieces, args.top_k, "31.2M Champion")
-        h = run_one(challenger_policy, teacher, device, seed, args.max_pieces, args.top_k, "41.2M Control")
-        champ_rows.append(c)
-        chall_rows.append(h)
+        b = run_one(baseline_policy, teacher, device, seed, args.max_pieces, args.top_k, args.baseline_label)
+        c = run_one(challenger_policy, teacher, device, seed, args.max_pieces, args.top_k, args.challenger_label)
+        baseline_rows.append(b)
+        challenger_rows.append(c)
 
         pair = PairedRow(
             seed=seed,
-            delta_pieces=h.pieces - c.pieces,
-            delta_lines=h.lines - c.lines,
-            delta_tetrises=h.tetrises - c.tetrises,
-            delta_value=h.value - c.value,
-            delta_reward_per_1000=h.reward_per_1000 - c.reward_per_1000,
-            delta_avg_height=h.avg_height - c.avg_height,
-            delta_max_height=h.max_height - c.max_height,
-            delta_max_holes=h.max_holes - c.max_holes,
-            delta_q_switch_rate=h.q_switch_rate - c.q_switch_rate,
-            delta_gameover=h.gameover - c.gameover,
+            delta_pieces=c.pieces - b.pieces,
+            delta_lines=c.lines - b.lines,
+            delta_tetrises=c.tetrises - b.tetrises,
+            delta_value=c.value - b.value,
+            delta_reward_per_1000=c.reward_per_1000 - b.reward_per_1000,
+            delta_avg_height=c.avg_height - b.avg_height,
+            delta_max_height=c.max_height - b.max_height,
+            delta_max_holes=c.max_holes - b.max_holes,
+            delta_q_switch_rate=c.q_switch_rate - b.q_switch_rate,
+            delta_gameover=c.gameover - b.gameover,
         )
         pairs.append(pair)
 
         print(
             f"[{i:>2}/{len(seeds)}] seed {seed} | "
-            f"31.2M P{c.pieces} L{c.lines} T{c.tetrises} V{c.value} H{c.max_height} holes{c.max_holes} GO{c.gameover} || "
-            f"41.2M P{h.pieces} L{h.lines} T{h.tetrises} V{h.value} H{h.max_height} holes{h.max_holes} GO{h.gameover} || "
+            f"{args.baseline_label} P{b.pieces} L{b.lines} T{b.tetrises} V{b.value} "
+            f"H{b.max_height} holes{b.max_holes} GO{b.gameover} || "
+            f"{args.challenger_label} P{c.pieces} L{c.lines} T{c.tetrises} V{c.value} "
+            f"H{c.max_height} holes{c.max_holes} GO{c.gameover} || "
             f"ΔV={pair.delta_value:+d} ΔT={pair.delta_tetrises:+d}"
         )
 
     elapsed = time.perf_counter() - started
-    champ = aggregate(champ_rows)
-    chall = aggregate(chall_rows)
+    baseline = aggregate(baseline_rows)
+    challenger = aggregate(challenger_rows)
 
     dv = [p.delta_value for p in pairs]
     dr = [p.delta_reward_per_1000 for p in pairs]
@@ -279,22 +301,24 @@ def main():
     losses = sum(x < 0 for x in dv)
 
     gates = {
-        "gameovers_not_worse": chall["gameovers"] <= champ["gameovers"],
-        "pieces_not_worse": chall["pieces_mean"] >= champ["pieces_mean"],
-        "reward_per_1000_better": chall["reward_per_1000_mean"] > champ["reward_per_1000_mean"],
-        "value_better": chall["value_mean"] > champ["value_mean"],
+        "gameovers_not_worse": challenger["gameovers"] <= baseline["gameovers"],
+        "pieces_not_worse": challenger["pieces_mean"] >= baseline["pieces_mean"],
+        "reward_per_1000_better": challenger["reward_per_1000_mean"] > baseline["reward_per_1000_mean"],
+        "value_better": challenger["value_mean"] > baseline["value_mean"],
     }
     all_pass = all(gates.values())
 
     stamp = datetime.now().strftime("%Y%m%d-%H%M%S")
     out = args.output_dir
     if out is None:
-        out = PROJECT_ROOT / "artifacts" / "control_31m_vs_41m" / f"fresh_{seeds[0]}_{seeds[-1]}_{stamp}"
+        lhs = safe_slug(args.baseline_label)
+        rhs = safe_slug(args.challenger_label)
+        out = PROJECT_ROOT / "artifacts" / "model_comparisons" / f"{lhs}_vs_{rhs}" / f"fresh_{seeds[0]}_{seeds[-1]}_{stamp}"
     elif not out.is_absolute():
         out = PROJECT_ROOT / out
     out.mkdir(parents=True, exist_ok=True)
 
-    write_csv(out / "games.csv", champ_rows + chall_rows)
+    write_csv(out / "games.csv", baseline_rows + challenger_rows)
     write_csv(out / "paired.csv", pairs)
 
     summary = {
@@ -302,11 +326,18 @@ def main():
             "created_at": datetime.now().isoformat(timespec="seconds"),
             "seeds": seeds,
             "max_pieces": args.max_pieces,
+            "top_k": args.top_k,
+            "gate": args.gate,
+            "device": str(device),
             "elapsed_seconds": elapsed,
             "status": "DEVELOPMENT ONLY - NO PROMOTION",
+            "baseline_label": args.baseline_label,
+            "challenger_label": args.challenger_label,
+            "baseline_checkpoint": str(args.baseline),
+            "challenger_checkpoint": str(args.challenger),
         },
-        "champion": champ,
-        "challenger": chall,
+        "baseline": baseline,
+        "challenger": challenger,
         "paired": {
             "mean_delta_value": mean(dv),
             "delta_value_bootstrap_95ci": list(ci_v),
@@ -324,39 +355,42 @@ def main():
     }
     (out / "summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
 
-    report = f"""31.2M CHAMPION vs 41.2M SAME-RECIPE CONTROL
+    report = f"""{args.baseline_label} vs {args.challenger_label}
 ====================================================================================================
 
 DEVELOPMENT ONLY — NO PROMOTION.
 
-Seeds: {args.seeds}
-Piece cap: {args.max_pieces}
+Baseline checkpoint : {args.baseline}
+Challenger checkpoint: {args.challenger}
+Seeds               : {args.seeds}
+Piece cap           : {args.max_pieces}
+Gate                : {args.gate:.3f}
 
-31.2M
-  pieces mean : {champ['pieces_mean']:.2f}
-  lines mean  : {champ['lines_mean']:.2f}
-  Tetris mean : {champ['tetrises_mean']:.2f}
-  value mean  : {champ['value_mean']:.2f}
-  R/1000 mean : {champ['reward_per_1000_mean']:.2f}
-  avgH mean   : {champ['avg_height_mean']:.3f}
-  worst maxH  : {champ['max_height_worst']}
-  worst holes : {champ['max_holes_worst']}
-  GO          : {champ['gameovers']}
-  Qswitch     : {champ['q_switch_rate_mean']*100:.2f}%
+{args.baseline_label}
+  pieces mean : {baseline['pieces_mean']:.2f}
+  lines mean  : {baseline['lines_mean']:.2f}
+  Tetris mean : {baseline['tetrises_mean']:.2f}
+  value mean  : {baseline['value_mean']:.2f}
+  R/1000 mean : {baseline['reward_per_1000_mean']:.2f}
+  avgH mean   : {baseline['avg_height_mean']:.3f}
+  worst maxH  : {baseline['max_height_worst']}
+  worst holes : {baseline['max_holes_worst']}
+  GO          : {baseline['gameovers']}
+  Qswitch     : {baseline['q_switch_rate_mean']*100:.2f}%
 
-41.2M
-  pieces mean : {chall['pieces_mean']:.2f}
-  lines mean  : {chall['lines_mean']:.2f}
-  Tetris mean : {chall['tetrises_mean']:.2f}
-  value mean  : {chall['value_mean']:.2f}
-  R/1000 mean : {chall['reward_per_1000_mean']:.2f}
-  avgH mean   : {chall['avg_height_mean']:.3f}
-  worst maxH  : {chall['max_height_worst']}
-  worst holes : {chall['max_holes_worst']}
-  GO          : {chall['gameovers']}
-  Qswitch     : {chall['q_switch_rate_mean']*100:.2f}%
+{args.challenger_label}
+  pieces mean : {challenger['pieces_mean']:.2f}
+  lines mean  : {challenger['lines_mean']:.2f}
+  Tetris mean : {challenger['tetrises_mean']:.2f}
+  value mean  : {challenger['value_mean']:.2f}
+  R/1000 mean : {challenger['reward_per_1000_mean']:.2f}
+  avgH mean   : {challenger['avg_height_mean']:.3f}
+  worst maxH  : {challenger['max_height_worst']}
+  worst holes : {challenger['max_holes_worst']}
+  GO          : {challenger['gameovers']}
+  Qswitch     : {challenger['q_switch_rate_mean']*100:.2f}%
 
-PAIRED 41.2M - 31.2M
+PAIRED {args.challenger_label} - {args.baseline_label}
   mean Δvalue : {mean(dv):+.2f}
   95% CI      : [{ci_v[0]:+.2f}, {ci_v[1]:+.2f}]
   value W/T/L : {wins}/{ties}/{losses}
@@ -381,17 +415,17 @@ DEVELOPMENT GATES
     print("=" * 108)
     print("FRESH DEVELOPMENT COMPARISON COMPLETE")
     print("=" * 108)
-    print(f"31.2M mean value     : {champ['value_mean']:.2f}")
-    print(f"41.2M mean value     : {chall['value_mean']:.2f}")
-    print(f"Paired mean Δvalue   : {mean(dv):+.2f}")
-    print(f"Paired 95% CI        : [{ci_v[0]:+.2f}, {ci_v[1]:+.2f}]")
-    print(f"Value W/T/L          : {wins}/{ties}/{losses}")
-    print(f"31.2M mean Tetris    : {champ['tetrises_mean']:.2f}")
-    print(f"41.2M mean Tetris    : {chall['tetrises_mean']:.2f}")
-    print(f"31.2M gameovers      : {champ['gameovers']}")
-    print(f"41.2M gameovers      : {chall['gameovers']}")
-    print(f"Development gates    : {'PASS' if all_pass else 'FAIL'}")
-    print("Output               :", out)
+    print(f"{args.baseline_label} mean value   : {baseline['value_mean']:.2f}")
+    print(f"{args.challenger_label} mean value : {challenger['value_mean']:.2f}")
+    print(f"Paired mean Δvalue  : {mean(dv):+.2f}")
+    print(f"Paired 95% CI       : [{ci_v[0]:+.2f}, {ci_v[1]:+.2f}]")
+    print(f"Value W/T/L         : {wins}/{ties}/{losses}")
+    print(f"{args.baseline_label} mean Tetris  : {baseline['tetrises_mean']:.2f}")
+    print(f"{args.challenger_label} mean Tetris: {challenger['tetrises_mean']:.2f}")
+    print(f"{args.baseline_label} gameovers    : {baseline['gameovers']}")
+    print(f"{args.challenger_label} gameovers  : {challenger['gameovers']}")
+    print(f"Development gates   : {'PASS' if all_pass else 'FAIL'}")
+    print("Output              :", out)
     print()
     print("Seeds used by this run are now DEVELOPMENT-CONSUMED.")
     print("=" * 108)
