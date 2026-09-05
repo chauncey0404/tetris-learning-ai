@@ -1,0 +1,47 @@
+{
+  "events": [
+    {
+      "kind": "send",
+      "player": "A",
+      "target": "B",
+      "frame": 100,
+      "packets": [4],
+      "holes": [3],
+      "expected": {
+        "pending": 4,
+        "active": 0,
+        "active_frames": [120]
+      }
+    },
+    {
+      "kind": "cancel",
+      "player": "B",
+      "frame": 110,
+      "lines": 2,
+      "expected": {
+        "cancelled": 2,
+        "pending": 2,
+        "active": 0
+      }
+    },
+    {
+      "kind": "advance",
+      "player": "B",
+      "frame": 120,
+      "expected": {
+        "pending": 2,
+        "active": 2
+      }
+    },
+    {
+      "kind": "tank",
+      "player": "B",
+      "frame": 120,
+      "expected": {
+        "inserted": 2,
+        "pending": 0,
+        "bottom_garbage_holes": [3, 3]
+      }
+    }
+  ]
+}

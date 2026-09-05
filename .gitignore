@@ -30,3 +30,7 @@ desktop.ini
 
 # Generated experiment outputs
 artifacts/
+
+data/tetrio/raw/
+data/tetrio/processed/*.parquet
+data/tetrio/processed/*.npzdata/tetrio/expert/*.parquet
