@@ -1,0 +1,100 @@
+{
+  "metadata": {
+    "input": "data\\tetrio\\expert\\top_players_s1_test.parquet",
+    "rows": 6537,
+    "per_group": 100,
+    "workers": 16,
+    "max_states": 50000,
+    "seed": 20260905,
+    "spawn_raise": 1,
+    "eval_seconds": 605.4447069999999
+  },
+  "counts": {
+    "rows": 6537,
+    "hold_ok": 6537,
+    "exact": 6537
+  },
+  "rates": {
+    "hold_semantics": 1.0,
+    "exact_geometry": 1.0,
+    "miss": 0.0
+  },
+  "by_piece": {
+    "T": {
+      "rows": 969,
+      "hold_ok": 969,
+      "exact": 969
+    },
+    "I": {
+      "rows": 987,
+      "hold_ok": 987,
+      "exact": 987
+    },
+    "O": {
+      "rows": 300,
+      "hold_ok": 300,
+      "exact": 300
+    },
+    "J": {
+      "rows": 1114,
+      "hold_ok": 1114,
+      "exact": 1114
+    },
+    "L": {
+      "rows": 1092,
+      "hold_ok": 1092,
+      "exact": 1092
+    },
+    "S": {
+      "rows": 1061,
+      "hold_ok": 1061,
+      "exact": 1061
+    },
+    "Z": {
+      "rows": 1014,
+      "hold_ok": 1014,
+      "exact": 1014
+    }
+  },
+  "by_hold_mode": {
+    "no_hold": {
+      "rows": 2455,
+      "hold_ok": 2455,
+      "exact": 2455
+    },
+    "hold_empty": {
+      "rows": 1610,
+      "hold_ok": 1610,
+      "exact": 1610
+    },
+    "hold_swap": {
+      "rows": 2472,
+      "hold_ok": 2472,
+      "exact": 2472
+    }
+  },
+  "by_rotation": {
+    "2": {
+      "rows": 1312,
+      "hold_ok": 1312,
+      "exact": 1312
+    },
+    "0": {
+      "rows": 2031,
+      "hold_ok": 2031,
+      "exact": 2031
+    },
+    "3": {
+      "rows": 1523,
+      "hold_ok": 1523,
+      "exact": 1523
+    },
+    "1": {
+      "rows": 1671,
+      "hold_ok": 1671,
+      "exact": 1671
+    }
+  },
+  "mismatch_examples": [],
+  "result": "PASS"
+}

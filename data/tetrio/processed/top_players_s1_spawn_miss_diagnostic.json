@@ -1,0 +1,944 @@
+{
+  "metadata": {
+    "gate_json": "data\\tetrio\\processed\\top_players_s1_reachability_gate.json",
+    "expert": "data\\tetrio\\expert\\top_players_s1_test.parquet",
+    "raw": "data\\tetrio\\processed\\top_players_s1.parquet",
+    "max_raise": 8,
+    "max_states": 50000
+  },
+  "summary": {
+    "cases": 4,
+    "standard_spawn_blocked": 4,
+    "raised_entry_recovers_target": 4,
+    "previous_row_cleared_positive": 0,
+    "classification": "RAISED_ENTRY_RECOVERS_ALL"
+  },
+  "cases": [
+    {
+      "game_id": 68292,
+      "subframe": 21161,
+      "piece": "Z",
+      "hold_mode": "no_hold",
+      "target": {
+        "piece": "Z",
+        "x": 6,
+        "y": 19,
+        "rotation": 3
+      },
+      "board": {
+        "occupied_cells": 184,
+        "top_occupied_y": 19,
+        "stack_height_from_floor": 21,
+        "occupied_by_row_near_top": {
+          "19": 5,
+          "20": 8,
+          "21": 9,
+          "22": 9,
+          "23": 9,
+          "24": 9,
+          "25": 9,
+          "26": 9
+        }
+      },
+      "standard_spawn": {
+        "start": {
+          "piece": "Z",
+          "x": 3,
+          "y": 18,
+          "rotation": 0
+        },
+        "valid": false,
+        "candidate_count": 0,
+        "exact_target": false,
+        "shortest_exact_path": null,
+        "error": null
+      },
+      "standard_spawn_cells": [
+        {
+          "x": 3,
+          "y": 18,
+          "status": "free"
+        },
+        {
+          "x": 4,
+          "y": 18,
+          "status": "free"
+        },
+        {
+          "x": 4,
+          "y": 19,
+          "status": "occupied"
+        },
+        {
+          "x": 5,
+          "y": 19,
+          "status": "occupied"
+        }
+      ],
+      "first_valid_raise": 1,
+      "first_exact_raise": 1,
+      "raised_spawn_trials": [
+        {
+          "start": {
+            "piece": "Z",
+            "x": 3,
+            "y": 17,
+            "rotation": 0
+          },
+          "valid": true,
+          "candidate_count": 233,
+          "exact_target": true,
+          "shortest_exact_path": [
+            "right",
+            "ccw",
+            "right",
+            "hard_drop"
+          ],
+          "error": null,
+          "raise_rows": 1
+        },
+        {
+          "start": {
+            "piece": "Z",
+            "x": 3,
+            "y": 16,
+            "rotation": 0
+          },
+          "valid": true,
+          "candidate_count": 233,
+          "exact_target": true,
+          "shortest_exact_path": [
+            "right",
+            "right",
+            "ccw",
+            "right",
+            "hard_drop"
+          ],
+          "error": null,
+          "raise_rows": 2
+        },
+        {
+          "start": {
+            "piece": "Z",
+            "x": 3,
+            "y": 15,
+            "rotation": 0
+          },
+          "valid": true,
+          "candidate_count": 233,
+          "exact_target": true,
+          "shortest_exact_path": [
+            "right",
+            "right",
+            "ccw",
+            "right",
+            "hard_drop"
+          ],
+          "error": null,
+          "raise_rows": 3
+        },
+        {
+          "start": {
+            "piece": "Z",
+            "x": 3,
+            "y": 14,
+            "rotation": 0
+          },
+          "valid": true,
+          "candidate_count": 233,
+          "exact_target": true,
+          "shortest_exact_path": [
+            "right",
+            "right",
+            "ccw",
+            "right",
+            "hard_drop"
+          ],
+          "error": null,
+          "raise_rows": 4
+        },
+        {
+          "start": {
+            "piece": "Z",
+            "x": 3,
+            "y": 13,
+            "rotation": 0
+          },
+          "valid": true,
+          "candidate_count": 233,
+          "exact_target": true,
+          "shortest_exact_path": [
+            "right",
+            "right",
+            "ccw",
+            "right",
+            "hard_drop"
+          ],
+          "error": null,
+          "raise_rows": 5
+        },
+        {
+          "start": {
+            "piece": "Z",
+            "x": 3,
+            "y": 12,
+            "rotation": 0
+          },
+          "valid": true,
+          "candidate_count": 233,
+          "exact_target": true,
+          "shortest_exact_path": [
+            "right",
+            "right",
+            "ccw",
+            "right",
+            "hard_drop"
+          ],
+          "error": null,
+          "raise_rows": 6
+        },
+        {
+          "start": {
+            "piece": "Z",
+            "x": 3,
+            "y": 11,
+            "rotation": 0
+          },
+          "valid": true,
+          "candidate_count": 233,
+          "exact_target": true,
+          "shortest_exact_path": [
+            "right",
+            "right",
+            "ccw",
+            "right",
+            "hard_drop"
+          ],
+          "error": null,
+          "raise_rows": 7
+        },
+        {
+          "start": {
+            "piece": "Z",
+            "x": 3,
+            "y": 10,
+            "rotation": 0
+          },
+          "valid": true,
+          "candidate_count": 233,
+          "exact_target": true,
+          "shortest_exact_path": [
+            "right",
+            "right",
+            "ccw",
+            "right",
+            "hard_drop"
+          ],
+          "error": null,
+          "raise_rows": 8
+        }
+      ],
+      "previous_raw": {
+        "subframe": 20738,
+        "placed": "O",
+        "cleared": 0,
+        "garbage_cleared": 0,
+        "attack": 0.0,
+        "t_spin": "N",
+        "combo": 1,
+        "btb": 0,
+        "immediate_garbage": 7.0,
+        "incoming_garbage": 7.0
+      },
+      "current_raw": {
+        "cleared": 2,
+        "garbage_cleared": 0,
+        "attack": 1.0,
+        "t_spin": "N",
+        "combo": 0,
+        "btb": 0,
+        "immediate_garbage": 0.0,
+        "incoming_garbage": 0.0
+      }
+    },
+    {
+      "game_id": 87932,
+      "subframe": 10921,
+      "piece": "L",
+      "hold_mode": "hold_swap",
+      "target": {
+        "piece": "L",
+        "x": 3,
+        "y": 18,
+        "rotation": 3
+      },
+      "board": {
+        "occupied_cells": 183,
+        "top_occupied_y": 19,
+        "stack_height_from_floor": 21,
+        "occupied_by_row_near_top": {
+          "19": 3,
+          "20": 9,
+          "21": 9,
+          "22": 9,
+          "23": 9,
+          "24": 9,
+          "25": 9,
+          "26": 9
+        }
+      },
+      "standard_spawn": {
+        "start": {
+          "piece": "L",
+          "x": 3,
+          "y": 18,
+          "rotation": 0
+        },
+        "valid": false,
+        "candidate_count": 0,
+        "exact_target": false,
+        "shortest_exact_path": null,
+        "error": null
+      },
+      "standard_spawn_cells": [
+        {
+          "x": 5,
+          "y": 18,
+          "status": "free"
+        },
+        {
+          "x": 3,
+          "y": 19,
+          "status": "occupied"
+        },
+        {
+          "x": 4,
+          "y": 19,
+          "status": "free"
+        },
+        {
+          "x": 5,
+          "y": 19,
+          "status": "free"
+        }
+      ],
+      "first_valid_raise": 1,
+      "first_exact_raise": 1,
+      "raised_spawn_trials": [
+        {
+          "start": {
+            "piece": "L",
+            "x": 3,
+            "y": 17,
+            "rotation": 0
+          },
+          "valid": true,
+          "candidate_count": 229,
+          "exact_target": true,
+          "shortest_exact_path": [
+            "ccw",
+            "hard_drop"
+          ],
+          "error": null,
+          "raise_rows": 1
+        },
+        {
+          "start": {
+            "piece": "L",
+            "x": 3,
+            "y": 16,
+            "rotation": 0
+          },
+          "valid": true,
+          "candidate_count": 229,
+          "exact_target": true,
+          "shortest_exact_path": [
+            "ccw",
+            "hard_drop"
+          ],
+          "error": null,
+          "raise_rows": 2
+        },
+        {
+          "start": {
+            "piece": "L",
+            "x": 3,
+            "y": 15,
+            "rotation": 0
+          },
+          "valid": true,
+          "candidate_count": 229,
+          "exact_target": true,
+          "shortest_exact_path": [
+            "ccw",
+            "hard_drop"
+          ],
+          "error": null,
+          "raise_rows": 3
+        },
+        {
+          "start": {
+            "piece": "L",
+            "x": 3,
+            "y": 14,
+            "rotation": 0
+          },
+          "valid": true,
+          "candidate_count": 229,
+          "exact_target": true,
+          "shortest_exact_path": [
+            "ccw",
+            "hard_drop"
+          ],
+          "error": null,
+          "raise_rows": 4
+        },
+        {
+          "start": {
+            "piece": "L",
+            "x": 3,
+            "y": 13,
+            "rotation": 0
+          },
+          "valid": true,
+          "candidate_count": 229,
+          "exact_target": true,
+          "shortest_exact_path": [
+            "ccw",
+            "hard_drop"
+          ],
+          "error": null,
+          "raise_rows": 5
+        },
+        {
+          "start": {
+            "piece": "L",
+            "x": 3,
+            "y": 12,
+            "rotation": 0
+          },
+          "valid": true,
+          "candidate_count": 229,
+          "exact_target": true,
+          "shortest_exact_path": [
+            "ccw",
+            "hard_drop"
+          ],
+          "error": null,
+          "raise_rows": 6
+        },
+        {
+          "start": {
+            "piece": "L",
+            "x": 3,
+            "y": 11,
+            "rotation": 0
+          },
+          "valid": true,
+          "candidate_count": 229,
+          "exact_target": true,
+          "shortest_exact_path": [
+            "ccw",
+            "hard_drop"
+          ],
+          "error": null,
+          "raise_rows": 7
+        },
+        {
+          "start": {
+            "piece": "L",
+            "x": 3,
+            "y": 10,
+            "rotation": 0
+          },
+          "valid": true,
+          "candidate_count": 229,
+          "exact_target": true,
+          "shortest_exact_path": [
+            "ccw",
+            "hard_drop"
+          ],
+          "error": null,
+          "raise_rows": 8
+        }
+      ],
+      "previous_raw": {
+        "subframe": 10621,
+        "placed": "I",
+        "cleared": 0,
+        "garbage_cleared": 0,
+        "attack": 0.0,
+        "t_spin": "N",
+        "combo": 0,
+        "btb": 0,
+        "immediate_garbage": 6.0,
+        "incoming_garbage": 6.0
+      },
+      "current_raw": {
+        "cleared": 1,
+        "garbage_cleared": 0,
+        "attack": 0.0,
+        "t_spin": "N",
+        "combo": 0,
+        "btb": 0,
+        "immediate_garbage": 0.0,
+        "incoming_garbage": 0.0
+      }
+    },
+    {
+      "game_id": 64029,
+      "subframe": 26643,
+      "piece": "L",
+      "hold_mode": "no_hold",
+      "target": {
+        "piece": "L",
+        "x": 4,
+        "y": 18,
+        "rotation": 3
+      },
+      "board": {
+        "occupied_cells": 184,
+        "top_occupied_y": 19,
+        "stack_height_from_floor": 21,
+        "occupied_by_row_near_top": {
+          "19": 4,
+          "20": 9,
+          "21": 9,
+          "22": 9,
+          "23": 9,
+          "24": 9,
+          "25": 9,
+          "26": 9
+        }
+      },
+      "standard_spawn": {
+        "start": {
+          "piece": "L",
+          "x": 3,
+          "y": 18,
+          "rotation": 0
+        },
+        "valid": false,
+        "candidate_count": 0,
+        "exact_target": false,
+        "shortest_exact_path": null,
+        "error": null
+      },
+      "standard_spawn_cells": [
+        {
+          "x": 5,
+          "y": 18,
+          "status": "free"
+        },
+        {
+          "x": 3,
+          "y": 19,
+          "status": "occupied"
+        },
+        {
+          "x": 4,
+          "y": 19,
+          "status": "occupied"
+        },
+        {
+          "x": 5,
+          "y": 19,
+          "status": "free"
+        }
+      ],
+      "first_valid_raise": 1,
+      "first_exact_raise": 1,
+      "raised_spawn_trials": [
+        {
+          "start": {
+            "piece": "L",
+            "x": 3,
+            "y": 17,
+            "rotation": 0
+          },
+          "valid": true,
+          "candidate_count": 226,
+          "exact_target": true,
+          "shortest_exact_path": [
+            "ccw",
+            "hard_drop"
+          ],
+          "error": null,
+          "raise_rows": 1
+        },
+        {
+          "start": {
+            "piece": "L",
+            "x": 3,
+            "y": 16,
+            "rotation": 0
+          },
+          "valid": true,
+          "candidate_count": 226,
+          "exact_target": true,
+          "shortest_exact_path": [
+            "ccw",
+            "right",
+            "hard_drop"
+          ],
+          "error": null,
+          "raise_rows": 2
+        },
+        {
+          "start": {
+            "piece": "L",
+            "x": 3,
+            "y": 15,
+            "rotation": 0
+          },
+          "valid": true,
+          "candidate_count": 226,
+          "exact_target": true,
+          "shortest_exact_path": [
+            "ccw",
+            "right",
+            "hard_drop"
+          ],
+          "error": null,
+          "raise_rows": 3
+        },
+        {
+          "start": {
+            "piece": "L",
+            "x": 3,
+            "y": 14,
+            "rotation": 0
+          },
+          "valid": true,
+          "candidate_count": 226,
+          "exact_target": true,
+          "shortest_exact_path": [
+            "ccw",
+            "right",
+            "hard_drop"
+          ],
+          "error": null,
+          "raise_rows": 4
+        },
+        {
+          "start": {
+            "piece": "L",
+            "x": 3,
+            "y": 13,
+            "rotation": 0
+          },
+          "valid": true,
+          "candidate_count": 226,
+          "exact_target": true,
+          "shortest_exact_path": [
+            "ccw",
+            "right",
+            "hard_drop"
+          ],
+          "error": null,
+          "raise_rows": 5
+        },
+        {
+          "start": {
+            "piece": "L",
+            "x": 3,
+            "y": 12,
+            "rotation": 0
+          },
+          "valid": true,
+          "candidate_count": 226,
+          "exact_target": true,
+          "shortest_exact_path": [
+            "ccw",
+            "right",
+            "hard_drop"
+          ],
+          "error": null,
+          "raise_rows": 6
+        },
+        {
+          "start": {
+            "piece": "L",
+            "x": 3,
+            "y": 11,
+            "rotation": 0
+          },
+          "valid": true,
+          "candidate_count": 226,
+          "exact_target": true,
+          "shortest_exact_path": [
+            "ccw",
+            "right",
+            "hard_drop"
+          ],
+          "error": null,
+          "raise_rows": 7
+        },
+        {
+          "start": {
+            "piece": "L",
+            "x": 3,
+            "y": 10,
+            "rotation": 0
+          },
+          "valid": true,
+          "candidate_count": 226,
+          "exact_target": true,
+          "shortest_exact_path": [
+            "ccw",
+            "right",
+            "hard_drop"
+          ],
+          "error": null,
+          "raise_rows": 8
+        }
+      ],
+      "previous_raw": {
+        "subframe": 26452,
+        "placed": "Z",
+        "cleared": 0,
+        "garbage_cleared": 0,
+        "attack": 0.0,
+        "t_spin": "N",
+        "combo": 1,
+        "btb": 0,
+        "immediate_garbage": 6.0,
+        "incoming_garbage": 7.0
+      },
+      "current_raw": {
+        "cleared": 1,
+        "garbage_cleared": 0,
+        "attack": 0.0,
+        "t_spin": "N",
+        "combo": 0,
+        "btb": 0,
+        "immediate_garbage": 1.0,
+        "incoming_garbage": 2.0
+      }
+    },
+    {
+      "game_id": 48678,
+      "subframe": 18761,
+      "piece": "S",
+      "hold_mode": "no_hold",
+      "target": {
+        "piece": "S",
+        "x": 3,
+        "y": 19,
+        "rotation": 1
+      },
+      "board": {
+        "occupied_cells": 182,
+        "top_occupied_y": 19,
+        "stack_height_from_floor": 21,
+        "occupied_by_row_near_top": {
+          "19": 5,
+          "20": 6,
+          "21": 9,
+          "22": 9,
+          "23": 9,
+          "24": 9,
+          "25": 9,
+          "26": 9
+        }
+      },
+      "standard_spawn": {
+        "start": {
+          "piece": "S",
+          "x": 3,
+          "y": 18,
+          "rotation": 0
+        },
+        "valid": false,
+        "candidate_count": 0,
+        "exact_target": false,
+        "shortest_exact_path": null,
+        "error": null
+      },
+      "standard_spawn_cells": [
+        {
+          "x": 4,
+          "y": 18,
+          "status": "free"
+        },
+        {
+          "x": 5,
+          "y": 18,
+          "status": "free"
+        },
+        {
+          "x": 3,
+          "y": 19,
+          "status": "occupied"
+        },
+        {
+          "x": 4,
+          "y": 19,
+          "status": "free"
+        }
+      ],
+      "first_valid_raise": 1,
+      "first_exact_raise": 1,
+      "raised_spawn_trials": [
+        {
+          "start": {
+            "piece": "S",
+            "x": 3,
+            "y": 17,
+            "rotation": 0
+          },
+          "valid": true,
+          "candidate_count": 230,
+          "exact_target": true,
+          "shortest_exact_path": [
+            "cw",
+            "hard_drop"
+          ],
+          "error": null,
+          "raise_rows": 1
+        },
+        {
+          "start": {
+            "piece": "S",
+            "x": 3,
+            "y": 16,
+            "rotation": 0
+          },
+          "valid": true,
+          "candidate_count": 230,
+          "exact_target": true,
+          "shortest_exact_path": [
+            "cw",
+            "hard_drop"
+          ],
+          "error": null,
+          "raise_rows": 2
+        },
+        {
+          "start": {
+            "piece": "S",
+            "x": 3,
+            "y": 15,
+            "rotation": 0
+          },
+          "valid": true,
+          "candidate_count": 230,
+          "exact_target": true,
+          "shortest_exact_path": [
+            "cw",
+            "hard_drop"
+          ],
+          "error": null,
+          "raise_rows": 3
+        },
+        {
+          "start": {
+            "piece": "S",
+            "x": 3,
+            "y": 14,
+            "rotation": 0
+          },
+          "valid": true,
+          "candidate_count": 230,
+          "exact_target": true,
+          "shortest_exact_path": [
+            "cw",
+            "hard_drop"
+          ],
+          "error": null,
+          "raise_rows": 4
+        },
+        {
+          "start": {
+            "piece": "S",
+            "x": 3,
+            "y": 13,
+            "rotation": 0
+          },
+          "valid": true,
+          "candidate_count": 230,
+          "exact_target": true,
+          "shortest_exact_path": [
+            "cw",
+            "hard_drop"
+          ],
+          "error": null,
+          "raise_rows": 5
+        },
+        {
+          "start": {
+            "piece": "S",
+            "x": 3,
+            "y": 12,
+            "rotation": 0
+          },
+          "valid": true,
+          "candidate_count": 230,
+          "exact_target": true,
+          "shortest_exact_path": [
+            "cw",
+            "hard_drop"
+          ],
+          "error": null,
+          "raise_rows": 6
+        },
+        {
+          "start": {
+            "piece": "S",
+            "x": 3,
+            "y": 11,
+            "rotation": 0
+          },
+          "valid": true,
+          "candidate_count": 230,
+          "exact_target": true,
+          "shortest_exact_path": [
+            "cw",
+            "hard_drop"
+          ],
+          "error": null,
+          "raise_rows": 7
+        },
+        {
+          "start": {
+            "piece": "S",
+            "x": 3,
+            "y": 10,
+            "rotation": 0
+          },
+          "valid": true,
+          "candidate_count": 230,
+          "exact_target": true,
+          "shortest_exact_path": [
+            "cw",
+            "hard_drop"
+          ],
+          "error": null,
+          "raise_rows": 8
+        }
+      ],
+      "previous_raw": {
+        "subframe": 18542,
+        "placed": "L",
+        "cleared": 0,
+        "garbage_cleared": 0,
+        "attack": 1.0,
+        "t_spin": "N",
+        "combo": 5,
+        "btb": 1,
+        "immediate_garbage": 15.0,
+        "incoming_garbage": 15.0
+      },
+      "current_raw": {
+        "cleared": 1,
+        "garbage_cleared": 0,
+        "attack": 0.0,
+        "t_spin": "N",
+        "combo": 0,
+        "btb": 1,
+        "immediate_garbage": 7.0,
+        "incoming_garbage": 7.0
+      }
+    }
+  ]
+}
