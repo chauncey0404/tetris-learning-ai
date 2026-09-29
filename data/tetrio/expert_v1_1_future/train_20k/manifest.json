@@ -1,0 +1,77 @@
+{
+  "format": "tetrio_expert_v1_1_future_cache_v1",
+  "status": "PASS",
+  "checkpoint": "models\\tetrio_expert_v1_joint_100k.pt",
+  "checkpoint_epoch": 6,
+  "v0_cache": "data\\tetrio\\expert_v0\\train_full_fast_s8192",
+  "cf_cache": "data\\tetrio\\expert_v1_cf\\train_100k",
+  "available_rows": 100000,
+  "requested_rows": 20000,
+  "built_rows": 20000,
+  "stored_candidates": 183231,
+  "mean_stored_candidates": 9.16155,
+  "shortlist_recall": 0.97095,
+  "top_overall": 8,
+  "top_per_branch": 4,
+  "feature_names": [
+    "holes_after",
+    "hole_delta",
+    "max_height_after",
+    "aggregate_height_after",
+    "bumpiness_after",
+    "max_well_after",
+    "lines_now",
+    "next_candidate_count",
+    "next_min_holes",
+    "next_best_hole_delta",
+    "next_min_height",
+    "next_min_bumpiness",
+    "next_max_lines",
+    "next_no_new_hole_fraction",
+    "t_active_next",
+    "t_hold_next",
+    "t_preview1",
+    "t_preview2",
+    "t_proxy_before",
+    "t_proxy_after",
+    "t_exact_full_after",
+    "t_exact_mini_after",
+    "t_opportunity_destroyed",
+    "t_opportunity_created",
+    "current_tspin_full",
+    "current_tspin_mini",
+    "current_tspin_lines",
+    "t_cashout_deferred",
+    "next_dead_end",
+    "use_hold"
+  ],
+  "feature_config": {
+    "fast_max_states": 10000,
+    "reference_max_states": 50000,
+    "tactical_preview_depth": 2,
+    "exact_immediate_t": false
+  },
+  "tactical_mode": "fast_proxy_bulk_v2",
+  "model_uses_exact_t_features": false,
+  "resume_enabled": true,
+  "seconds": 266.84731280000415,
+  "rows_per_second": 74.94922766934339,
+  "shards": [
+    {
+      "file": "shard_00000.npz",
+      "rows": 8192,
+      "stored_candidates": 74925,
+      "resumed": true
+    },
+    {
+      "file": "shard_00001.npz",
+      "rows": 8192,
+      "stored_candidates": 75134
+    },
+    {
+      "file": "shard_00002.npz",
+      "rows": 3616,
+      "stored_candidates": 33172
+    }
+  ]
+}

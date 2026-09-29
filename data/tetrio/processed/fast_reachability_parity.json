@@ -1,0 +1,29 @@
+{
+  "metadata": {
+    "input": "data\\tetrio\\expert\\top_players_s1_test.parquet",
+    "rows": 1000,
+    "seed": 20260907,
+    "reference_max_states": 50000,
+    "fast_max_states": 10000,
+    "wall_seconds": 454.75441280000086
+  },
+  "result": "PASS",
+  "matched_rows": 1000,
+  "mismatch_rows": 0,
+  "reference_seconds": 450.71783819999837,
+  "fast_seconds": 4.011313800056087,
+  "speedup": 112.36165023880615,
+  "reference_geometry_count": 34712,
+  "fast_geometry_count": 34712,
+  "by_piece": {
+    "Z": 153,
+    "I": 127,
+    "L": 142,
+    "J": 139,
+    "T": 146,
+    "S": 148,
+    "O": 145
+  },
+  "mismatch_examples": [],
+  "contract": "unique landing geometry parity only; fast backend does not preserve spin/path metadata"
+}

@@ -1,0 +1,31 @@
+{
+  "format": "tetrio_expert_v1_2_state_cache_v1",
+  "status": "PASS",
+  "future_cache": "data\\tetrio\\expert_v1_1_future\\val_10k",
+  "battle_state_parquet": "data\\tetrio\\expert_stateful\\top_players_s1_val_battle_state.parquet",
+  "rows": 10000,
+  "feature_names": [
+    "raw_combo_before",
+    "raw_btb_before",
+    "previous_cleared",
+    "previous_t_spin_any",
+    "previous_t_spin_mini",
+    "previous_attack",
+    "previous_garbage_cleared"
+  ],
+  "alignment": "exact_unordered_key_lookup_fail_closed_duplicate_keys",
+  "scanned_battle_rows": 360753,
+  "future_duplicate_keys": 0,
+  "duplicate_keys_in_split": 0,
+  "seconds": 0.2811010000004899,
+  "shards": [
+    {
+      "file": "shard_00000.npz",
+      "rows": 8192
+    },
+    {
+      "file": "shard_00001.npz",
+      "rows": 1808
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "format": "tetrio_expert_v1_counterfactual_sidecar_v1",
+  "status": "PASS",
+  "v0_cache": "data\\tetrio\\expert_v0\\val_10k",
+  "v0_manifest_sha256": "452358fa90a4e6bc8da313dfae7ae332363833ec194f603beb28c79772e5b6a1",
+  "available_v0_rows": 10000,
+  "requested_rows": 0,
+  "built_rows": 10000,
+  "selected_candidates_reused": 347186,
+  "counterfactual_candidates": 345888,
+  "joint_mean_candidates": 69.3074,
+  "backend": "fast",
+  "fast_max_states": 10000,
+  "reference_max_states": 50000,
+  "reference_audit_every": 1000,
+  "reference_audits": 10,
+  "reference_fallbacks": 0,
+  "seconds": 12.919322400000965,
+  "rows_per_second": 774.0344029187826,
+  "candidate_contract": "V0 expert-selected branch reused + opposite Hold branch sidecar; both branches compete jointly in Expert-v1",
+  "structural_metadata": "holes_before + holes for every selected/counterfactual candidate",
+  "failures": [],
+  "shards": [
+    {
+      "file": "shard_00000.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283415,
+      "selected_candidates": 284489,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 42
+    },
+    {
+      "file": "shard_00001.npz",
+      "rows": 1808,
+      "counterfactual_candidates": 62473,
+      "selected_candidates": 62697,
+      "min_counterfactual_candidates": 10,
+      "max_counterfactual_candidates": 42
+    }
+  ]
+}

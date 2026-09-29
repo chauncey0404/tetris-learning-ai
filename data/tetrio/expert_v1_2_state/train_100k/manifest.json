@@ -1,0 +1,75 @@
+{
+  "format": "tetrio_expert_v1_2_state_cache_v1",
+  "status": "PASS",
+  "future_cache": "data\\tetrio\\expert_v1_1_future\\train_100k",
+  "battle_state_parquet": "data\\tetrio\\expert_stateful\\top_players_s1_train_battle_state.parquet",
+  "rows": 100000,
+  "feature_names": [
+    "raw_combo_before",
+    "raw_btb_before",
+    "previous_cleared",
+    "previous_t_spin_any",
+    "previous_t_spin_mini",
+    "previous_attack",
+    "previous_garbage_cleared"
+  ],
+  "alignment": "exact_unordered_key_lookup_fail_closed_duplicate_keys",
+  "scanned_battle_rows": 6625536,
+  "future_duplicate_keys": 0,
+  "duplicate_keys_in_split": 8,
+  "seconds": 6.965449399998761,
+  "shards": [
+    {
+      "file": "shard_00000.npz",
+      "rows": 8192
+    },
+    {
+      "file": "shard_00001.npz",
+      "rows": 8192
+    },
+    {
+      "file": "shard_00002.npz",
+      "rows": 8192
+    },
+    {
+      "file": "shard_00003.npz",
+      "rows": 8192
+    },
+    {
+      "file": "shard_00004.npz",
+      "rows": 8192
+    },
+    {
+      "file": "shard_00005.npz",
+      "rows": 8192
+    },
+    {
+      "file": "shard_00006.npz",
+      "rows": 8192
+    },
+    {
+      "file": "shard_00007.npz",
+      "rows": 8192
+    },
+    {
+      "file": "shard_00008.npz",
+      "rows": 8192
+    },
+    {
+      "file": "shard_00009.npz",
+      "rows": 8192
+    },
+    {
+      "file": "shard_00010.npz",
+      "rows": 8192
+    },
+    {
+      "file": "shard_00011.npz",
+      "rows": 8192
+    },
+    {
+      "file": "shard_00012.npz",
+      "rows": 1696
+    }
+  ]
+}

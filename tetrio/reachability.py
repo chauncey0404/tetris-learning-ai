@@ -10,12 +10,17 @@ from tetris_ai.core.types import PieceState, ReachablePlacement
 
 
 # Historical top-player corpus parity:
-# - baseline generic entry missed 4 / 1,459 sampled expert placements because
-#   the generic start collided with the stack;
-# - shifting the entry one row upward recovered all 4;
-# - a larger deterministic stratified gate then matched 6,537 / 6,537 expert
-#   placements exactly.
+# - generic entry initially missed 4 / 1,459 sampled expert placements;
+# - a one-row TETR.IO-specific raise recovered all 4 and matched 6,537 / 6,537
+#   in the larger deterministic gate;
+# - the complete 6,625,594-row train-corpus build at raise=1 produced only
+#   2 reference-confirmed historical exceptions;
+# - changing the global rule to raise=2 increased failures to 99 / 6,625,594;
+# - a reference entry-height matrix over the recorded raise=2 failures showed
+#   every tested case was recoverable at generic or generic-1, so a global
+#   raise=2 rule is rejected.
 #
+# Production contract: generic spawn - 1 row.
 # Keep this TETR.IO-specific. Do not alter the shared Guideline/core spawn.
 TETRIO_ENTRY_RAISE_ROWS = 1
 

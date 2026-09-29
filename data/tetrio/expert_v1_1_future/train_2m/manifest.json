@@ -1,0 +1,1611 @@
+{
+  "format": "tetrio_expert_v1_1_future_cache_v1",
+  "status": "PASS",
+  "checkpoint": "models\\tetrio_expert_v1_joint_100k.pt",
+  "checkpoint_epoch": 6,
+  "v0_cache": "data\\tetrio\\expert_v0\\train_full_fast_s8192",
+  "cf_cache": "data\\tetrio\\expert_v1_cf\\train_2m",
+  "available_rows": 2000000,
+  "requested_rows": 2000000,
+  "built_rows": 2000000,
+  "stored_candidates": 18366500,
+  "mean_stored_candidates": 9.18325,
+  "shortlist_recall": 0.962489,
+  "top_overall": 8,
+  "top_per_branch": 4,
+  "feature_names": [
+    "holes_after",
+    "hole_delta",
+    "max_height_after",
+    "aggregate_height_after",
+    "bumpiness_after",
+    "max_well_after",
+    "lines_now",
+    "next_candidate_count",
+    "next_min_holes",
+    "next_best_hole_delta",
+    "next_min_height",
+    "next_min_bumpiness",
+    "next_max_lines",
+    "next_no_new_hole_fraction",
+    "t_active_next",
+    "t_hold_next",
+    "t_preview1",
+    "t_preview2",
+    "t_proxy_before",
+    "t_proxy_after",
+    "t_exact_full_after",
+    "t_exact_mini_after",
+    "t_opportunity_destroyed",
+    "t_opportunity_created",
+    "current_tspin_full",
+    "current_tspin_mini",
+    "current_tspin_lines",
+    "t_cashout_deferred",
+    "next_dead_end",
+    "use_hold"
+  ],
+  "feature_config": {
+    "fast_max_states": 10000,
+    "reference_max_states": 50000,
+    "tactical_preview_depth": 2,
+    "exact_immediate_t": false
+  },
+  "tactical_mode": "fast_proxy_bulk_v2",
+  "model_uses_exact_t_features": false,
+  "resume_enabled": true,
+  "reuse_dir": "data\\tetrio\\expert_v1_1_future\\train_500k",
+  "seconds": 9912.6382809,
+  "rows_per_second": 201.76263304731557,
+  "shards": [
+    {
+      "file": "shard_00000.npz",
+      "rows": 8192,
+      "stored_candidates": 74925,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00001.npz",
+      "rows": 8192,
+      "stored_candidates": 75134,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00002.npz",
+      "rows": 8192,
+      "stored_candidates": 75176,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00003.npz",
+      "rows": 8192,
+      "stored_candidates": 75081,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00004.npz",
+      "rows": 8192,
+      "stored_candidates": 75229,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00005.npz",
+      "rows": 8192,
+      "stored_candidates": 75299,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00006.npz",
+      "rows": 8192,
+      "stored_candidates": 75100,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00007.npz",
+      "rows": 8192,
+      "stored_candidates": 75084,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00008.npz",
+      "rows": 8192,
+      "stored_candidates": 75180,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00009.npz",
+      "rows": 8192,
+      "stored_candidates": 75102,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00010.npz",
+      "rows": 8192,
+      "stored_candidates": 74983,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00011.npz",
+      "rows": 8192,
+      "stored_candidates": 75082,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00012.npz",
+      "rows": 8192,
+      "stored_candidates": 75237,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00013.npz",
+      "rows": 8192,
+      "stored_candidates": 75262,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00014.npz",
+      "rows": 8192,
+      "stored_candidates": 75219,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00015.npz",
+      "rows": 8192,
+      "stored_candidates": 75320,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00016.npz",
+      "rows": 8192,
+      "stored_candidates": 75341,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00017.npz",
+      "rows": 8192,
+      "stored_candidates": 75138,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00018.npz",
+      "rows": 8192,
+      "stored_candidates": 75149,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00019.npz",
+      "rows": 8192,
+      "stored_candidates": 75352,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00020.npz",
+      "rows": 8192,
+      "stored_candidates": 75241,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00021.npz",
+      "rows": 8192,
+      "stored_candidates": 75251,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00022.npz",
+      "rows": 8192,
+      "stored_candidates": 75015,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00023.npz",
+      "rows": 8192,
+      "stored_candidates": 75259,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00024.npz",
+      "rows": 8192,
+      "stored_candidates": 75407,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00025.npz",
+      "rows": 8192,
+      "stored_candidates": 75172,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00026.npz",
+      "rows": 8192,
+      "stored_candidates": 75066,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00027.npz",
+      "rows": 8192,
+      "stored_candidates": 75385,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00028.npz",
+      "rows": 8192,
+      "stored_candidates": 75156,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00029.npz",
+      "rows": 8192,
+      "stored_candidates": 74998,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00030.npz",
+      "rows": 8192,
+      "stored_candidates": 75193,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00031.npz",
+      "rows": 8192,
+      "stored_candidates": 75321,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00032.npz",
+      "rows": 8192,
+      "stored_candidates": 75195,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00033.npz",
+      "rows": 8192,
+      "stored_candidates": 75372,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00034.npz",
+      "rows": 8192,
+      "stored_candidates": 75180,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00035.npz",
+      "rows": 8192,
+      "stored_candidates": 75149,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00036.npz",
+      "rows": 8192,
+      "stored_candidates": 75248,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00037.npz",
+      "rows": 8192,
+      "stored_candidates": 75243,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00038.npz",
+      "rows": 8192,
+      "stored_candidates": 75237,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00039.npz",
+      "rows": 8192,
+      "stored_candidates": 75320,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00040.npz",
+      "rows": 8192,
+      "stored_candidates": 75168,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00041.npz",
+      "rows": 8192,
+      "stored_candidates": 75107,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00042.npz",
+      "rows": 8192,
+      "stored_candidates": 75140,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00043.npz",
+      "rows": 8192,
+      "stored_candidates": 75260,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00044.npz",
+      "rows": 8192,
+      "stored_candidates": 75295,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00045.npz",
+      "rows": 8192,
+      "stored_candidates": 75296,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00046.npz",
+      "rows": 8192,
+      "stored_candidates": 75298,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00047.npz",
+      "rows": 8192,
+      "stored_candidates": 75428,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00048.npz",
+      "rows": 8192,
+      "stored_candidates": 75289,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00049.npz",
+      "rows": 8192,
+      "stored_candidates": 75284,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00050.npz",
+      "rows": 8192,
+      "stored_candidates": 75223,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00051.npz",
+      "rows": 8192,
+      "stored_candidates": 75229,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00052.npz",
+      "rows": 8192,
+      "stored_candidates": 75275,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00053.npz",
+      "rows": 8192,
+      "stored_candidates": 75214,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00054.npz",
+      "rows": 8192,
+      "stored_candidates": 75416,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00055.npz",
+      "rows": 8192,
+      "stored_candidates": 75165,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00056.npz",
+      "rows": 8192,
+      "stored_candidates": 75207,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00057.npz",
+      "rows": 8192,
+      "stored_candidates": 75166,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00058.npz",
+      "rows": 8192,
+      "stored_candidates": 75171,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00059.npz",
+      "rows": 8192,
+      "stored_candidates": 75230,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00060.npz",
+      "rows": 8192,
+      "stored_candidates": 75423,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00061.npz",
+      "rows": 8192,
+      "stored_candidates": 75189,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00062.npz",
+      "rows": 8192,
+      "stored_candidates": 75178,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00063.npz",
+      "rows": 8192,
+      "stored_candidates": 75173,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00064.npz",
+      "rows": 8192,
+      "stored_candidates": 75210,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00065.npz",
+      "rows": 8192,
+      "stored_candidates": 75184,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00066.npz",
+      "rows": 8192,
+      "stored_candidates": 75030,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00067.npz",
+      "rows": 8192,
+      "stored_candidates": 75258,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00068.npz",
+      "rows": 8192,
+      "stored_candidates": 75357,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00069.npz",
+      "rows": 8192,
+      "stored_candidates": 75402,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00070.npz",
+      "rows": 8192,
+      "stored_candidates": 75356,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00071.npz",
+      "rows": 8192,
+      "stored_candidates": 75271,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00072.npz",
+      "rows": 8192,
+      "stored_candidates": 75256,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00073.npz",
+      "rows": 8192,
+      "stored_candidates": 75246,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00074.npz",
+      "rows": 8192,
+      "stored_candidates": 75382,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00075.npz",
+      "rows": 8192,
+      "stored_candidates": 75262,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00076.npz",
+      "rows": 8192,
+      "stored_candidates": 75394,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00077.npz",
+      "rows": 8192,
+      "stored_candidates": 75195,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00078.npz",
+      "rows": 8192,
+      "stored_candidates": 75188,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00079.npz",
+      "rows": 8192,
+      "stored_candidates": 75195,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00080.npz",
+      "rows": 8192,
+      "stored_candidates": 75310,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00081.npz",
+      "rows": 8192,
+      "stored_candidates": 75248,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00082.npz",
+      "rows": 8192,
+      "stored_candidates": 75223,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00083.npz",
+      "rows": 8192,
+      "stored_candidates": 75342,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00084.npz",
+      "rows": 8192,
+      "stored_candidates": 75364,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00085.npz",
+      "rows": 8192,
+      "stored_candidates": 75197,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00086.npz",
+      "rows": 8192,
+      "stored_candidates": 75255,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00087.npz",
+      "rows": 8192,
+      "stored_candidates": 75275,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00088.npz",
+      "rows": 8192,
+      "stored_candidates": 75267,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00089.npz",
+      "rows": 8192,
+      "stored_candidates": 75240,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00090.npz",
+      "rows": 8192,
+      "stored_candidates": 75292,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00091.npz",
+      "rows": 8192,
+      "stored_candidates": 75162,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00092.npz",
+      "rows": 8192,
+      "stored_candidates": 75141,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00093.npz",
+      "rows": 8192,
+      "stored_candidates": 75207,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00094.npz",
+      "rows": 8192,
+      "stored_candidates": 75154,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00095.npz",
+      "rows": 8192,
+      "stored_candidates": 75271,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00096.npz",
+      "rows": 8192,
+      "stored_candidates": 75267,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00097.npz",
+      "rows": 8192,
+      "stored_candidates": 75234,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00098.npz",
+      "rows": 8192,
+      "stored_candidates": 75099,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00099.npz",
+      "rows": 8192,
+      "stored_candidates": 75356,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00100.npz",
+      "rows": 8192,
+      "stored_candidates": 75147,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00101.npz",
+      "rows": 8192,
+      "stored_candidates": 75373,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00102.npz",
+      "rows": 8192,
+      "stored_candidates": 75455,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00103.npz",
+      "rows": 8192,
+      "stored_candidates": 75219,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00104.npz",
+      "rows": 8192,
+      "stored_candidates": 75165,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00105.npz",
+      "rows": 8192,
+      "stored_candidates": 75117,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00106.npz",
+      "rows": 8192,
+      "stored_candidates": 75349,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00107.npz",
+      "rows": 8192,
+      "stored_candidates": 75180,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00108.npz",
+      "rows": 8192,
+      "stored_candidates": 75168,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00109.npz",
+      "rows": 8192,
+      "stored_candidates": 75280,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00110.npz",
+      "rows": 8192,
+      "stored_candidates": 75221,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00111.npz",
+      "rows": 8192,
+      "stored_candidates": 75288,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00112.npz",
+      "rows": 8192,
+      "stored_candidates": 75153,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00113.npz",
+      "rows": 8192,
+      "stored_candidates": 75288,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00114.npz",
+      "rows": 8192,
+      "stored_candidates": 75273,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00115.npz",
+      "rows": 8192,
+      "stored_candidates": 75273,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00116.npz",
+      "rows": 8192,
+      "stored_candidates": 75069,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00117.npz",
+      "rows": 8192,
+      "stored_candidates": 75152,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00118.npz",
+      "rows": 8192,
+      "stored_candidates": 75156,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00119.npz",
+      "rows": 8192,
+      "stored_candidates": 75336,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00120.npz",
+      "rows": 8192,
+      "stored_candidates": 75206,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00121.npz",
+      "rows": 8192,
+      "stored_candidates": 75178,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00122.npz",
+      "rows": 8192,
+      "stored_candidates": 75392,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00123.npz",
+      "rows": 8192,
+      "stored_candidates": 75166,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00124.npz",
+      "rows": 8192,
+      "stored_candidates": 75358,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00125.npz",
+      "rows": 8192,
+      "stored_candidates": 75321,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00126.npz",
+      "rows": 8192,
+      "stored_candidates": 75161,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00127.npz",
+      "rows": 8192,
+      "stored_candidates": 75099,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00128.npz",
+      "rows": 8192,
+      "stored_candidates": 75211,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00129.npz",
+      "rows": 8192,
+      "stored_candidates": 75224,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00130.npz",
+      "rows": 8192,
+      "stored_candidates": 75268,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00131.npz",
+      "rows": 8192,
+      "stored_candidates": 75409,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00132.npz",
+      "rows": 8192,
+      "stored_candidates": 75244,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00133.npz",
+      "rows": 8192,
+      "stored_candidates": 75120,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00134.npz",
+      "rows": 8192,
+      "stored_candidates": 75227,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00135.npz",
+      "rows": 8192,
+      "stored_candidates": 75183,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00136.npz",
+      "rows": 8192,
+      "stored_candidates": 75203,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00137.npz",
+      "rows": 8192,
+      "stored_candidates": 75236,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00138.npz",
+      "rows": 8192,
+      "stored_candidates": 75234,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00139.npz",
+      "rows": 8192,
+      "stored_candidates": 75285,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00140.npz",
+      "rows": 8192,
+      "stored_candidates": 75320,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00141.npz",
+      "rows": 8192,
+      "stored_candidates": 75318,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00142.npz",
+      "rows": 8192,
+      "stored_candidates": 75199,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00143.npz",
+      "rows": 8192,
+      "stored_candidates": 75183,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00144.npz",
+      "rows": 8192,
+      "stored_candidates": 75088,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00145.npz",
+      "rows": 8192,
+      "stored_candidates": 75240,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00146.npz",
+      "rows": 8192,
+      "stored_candidates": 75209,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00147.npz",
+      "rows": 8192,
+      "stored_candidates": 75005,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00148.npz",
+      "rows": 8192,
+      "stored_candidates": 75271,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00149.npz",
+      "rows": 8192,
+      "stored_candidates": 75299,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00150.npz",
+      "rows": 8192,
+      "stored_candidates": 75142,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00151.npz",
+      "rows": 8192,
+      "stored_candidates": 75252,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00152.npz",
+      "rows": 8192,
+      "stored_candidates": 75178,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00153.npz",
+      "rows": 8192,
+      "stored_candidates": 75286,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00154.npz",
+      "rows": 8192,
+      "stored_candidates": 75126,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00155.npz",
+      "rows": 8192,
+      "stored_candidates": 75133,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00156.npz",
+      "rows": 8192,
+      "stored_candidates": 75158,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00157.npz",
+      "rows": 8192,
+      "stored_candidates": 75191,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00158.npz",
+      "rows": 8192,
+      "stored_candidates": 75127,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00159.npz",
+      "rows": 8192,
+      "stored_candidates": 75273,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00160.npz",
+      "rows": 8192,
+      "stored_candidates": 75338,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00161.npz",
+      "rows": 8192,
+      "stored_candidates": 75165,
+      "resumed": true,
+      "reuse_kind": "resume"
+    },
+    {
+      "file": "shard_00162.npz",
+      "rows": 8192,
+      "stored_candidates": 75176
+    },
+    {
+      "file": "shard_00163.npz",
+      "rows": 8192,
+      "stored_candidates": 75280
+    },
+    {
+      "file": "shard_00164.npz",
+      "rows": 8192,
+      "stored_candidates": 75249
+    },
+    {
+      "file": "shard_00165.npz",
+      "rows": 8192,
+      "stored_candidates": 75152
+    },
+    {
+      "file": "shard_00166.npz",
+      "rows": 8192,
+      "stored_candidates": 75368
+    },
+    {
+      "file": "shard_00167.npz",
+      "rows": 8192,
+      "stored_candidates": 75290
+    },
+    {
+      "file": "shard_00168.npz",
+      "rows": 8192,
+      "stored_candidates": 75247
+    },
+    {
+      "file": "shard_00169.npz",
+      "rows": 8192,
+      "stored_candidates": 75179
+    },
+    {
+      "file": "shard_00170.npz",
+      "rows": 8192,
+      "stored_candidates": 75039
+    },
+    {
+      "file": "shard_00171.npz",
+      "rows": 8192,
+      "stored_candidates": 75243
+    },
+    {
+      "file": "shard_00172.npz",
+      "rows": 8192,
+      "stored_candidates": 75331
+    },
+    {
+      "file": "shard_00173.npz",
+      "rows": 8192,
+      "stored_candidates": 75265
+    },
+    {
+      "file": "shard_00174.npz",
+      "rows": 8192,
+      "stored_candidates": 75165
+    },
+    {
+      "file": "shard_00175.npz",
+      "rows": 8192,
+      "stored_candidates": 75416
+    },
+    {
+      "file": "shard_00176.npz",
+      "rows": 8192,
+      "stored_candidates": 75247
+    },
+    {
+      "file": "shard_00177.npz",
+      "rows": 8192,
+      "stored_candidates": 75081
+    },
+    {
+      "file": "shard_00178.npz",
+      "rows": 8192,
+      "stored_candidates": 75272
+    },
+    {
+      "file": "shard_00179.npz",
+      "rows": 8192,
+      "stored_candidates": 75334
+    },
+    {
+      "file": "shard_00180.npz",
+      "rows": 8192,
+      "stored_candidates": 75320
+    },
+    {
+      "file": "shard_00181.npz",
+      "rows": 8192,
+      "stored_candidates": 75222
+    },
+    {
+      "file": "shard_00182.npz",
+      "rows": 8192,
+      "stored_candidates": 75271
+    },
+    {
+      "file": "shard_00183.npz",
+      "rows": 8192,
+      "stored_candidates": 75209
+    },
+    {
+      "file": "shard_00184.npz",
+      "rows": 8192,
+      "stored_candidates": 75241
+    },
+    {
+      "file": "shard_00185.npz",
+      "rows": 8192,
+      "stored_candidates": 75149
+    },
+    {
+      "file": "shard_00186.npz",
+      "rows": 8192,
+      "stored_candidates": 75121
+    },
+    {
+      "file": "shard_00187.npz",
+      "rows": 8192,
+      "stored_candidates": 75332
+    },
+    {
+      "file": "shard_00188.npz",
+      "rows": 8192,
+      "stored_candidates": 75226
+    },
+    {
+      "file": "shard_00189.npz",
+      "rows": 8192,
+      "stored_candidates": 75196
+    },
+    {
+      "file": "shard_00190.npz",
+      "rows": 8192,
+      "stored_candidates": 75170
+    },
+    {
+      "file": "shard_00191.npz",
+      "rows": 8192,
+      "stored_candidates": 75266
+    },
+    {
+      "file": "shard_00192.npz",
+      "rows": 8192,
+      "stored_candidates": 75367
+    },
+    {
+      "file": "shard_00193.npz",
+      "rows": 8192,
+      "stored_candidates": 75253
+    },
+    {
+      "file": "shard_00194.npz",
+      "rows": 8192,
+      "stored_candidates": 75164
+    },
+    {
+      "file": "shard_00195.npz",
+      "rows": 8192,
+      "stored_candidates": 75146
+    },
+    {
+      "file": "shard_00196.npz",
+      "rows": 8192,
+      "stored_candidates": 75272
+    },
+    {
+      "file": "shard_00197.npz",
+      "rows": 8192,
+      "stored_candidates": 75166
+    },
+    {
+      "file": "shard_00198.npz",
+      "rows": 8192,
+      "stored_candidates": 75228
+    },
+    {
+      "file": "shard_00199.npz",
+      "rows": 8192,
+      "stored_candidates": 75113
+    },
+    {
+      "file": "shard_00200.npz",
+      "rows": 8192,
+      "stored_candidates": 75303
+    },
+    {
+      "file": "shard_00201.npz",
+      "rows": 8192,
+      "stored_candidates": 75131
+    },
+    {
+      "file": "shard_00202.npz",
+      "rows": 8192,
+      "stored_candidates": 75210
+    },
+    {
+      "file": "shard_00203.npz",
+      "rows": 8192,
+      "stored_candidates": 75140
+    },
+    {
+      "file": "shard_00204.npz",
+      "rows": 8192,
+      "stored_candidates": 75198
+    },
+    {
+      "file": "shard_00205.npz",
+      "rows": 8192,
+      "stored_candidates": 75101
+    },
+    {
+      "file": "shard_00206.npz",
+      "rows": 8192,
+      "stored_candidates": 75280
+    },
+    {
+      "file": "shard_00207.npz",
+      "rows": 8192,
+      "stored_candidates": 75342
+    },
+    {
+      "file": "shard_00208.npz",
+      "rows": 8192,
+      "stored_candidates": 75229
+    },
+    {
+      "file": "shard_00209.npz",
+      "rows": 8192,
+      "stored_candidates": 75180
+    },
+    {
+      "file": "shard_00210.npz",
+      "rows": 8192,
+      "stored_candidates": 75181
+    },
+    {
+      "file": "shard_00211.npz",
+      "rows": 8192,
+      "stored_candidates": 75098
+    },
+    {
+      "file": "shard_00212.npz",
+      "rows": 8192,
+      "stored_candidates": 75260
+    },
+    {
+      "file": "shard_00213.npz",
+      "rows": 8192,
+      "stored_candidates": 75238
+    },
+    {
+      "file": "shard_00214.npz",
+      "rows": 8192,
+      "stored_candidates": 75314
+    },
+    {
+      "file": "shard_00215.npz",
+      "rows": 8192,
+      "stored_candidates": 75248
+    },
+    {
+      "file": "shard_00216.npz",
+      "rows": 8192,
+      "stored_candidates": 75311
+    },
+    {
+      "file": "shard_00217.npz",
+      "rows": 8192,
+      "stored_candidates": 75295
+    },
+    {
+      "file": "shard_00218.npz",
+      "rows": 8192,
+      "stored_candidates": 75172
+    },
+    {
+      "file": "shard_00219.npz",
+      "rows": 8192,
+      "stored_candidates": 75124
+    },
+    {
+      "file": "shard_00220.npz",
+      "rows": 8192,
+      "stored_candidates": 75336
+    },
+    {
+      "file": "shard_00221.npz",
+      "rows": 8192,
+      "stored_candidates": 75176
+    },
+    {
+      "file": "shard_00222.npz",
+      "rows": 8192,
+      "stored_candidates": 75311
+    },
+    {
+      "file": "shard_00223.npz",
+      "rows": 8192,
+      "stored_candidates": 75308
+    },
+    {
+      "file": "shard_00224.npz",
+      "rows": 8192,
+      "stored_candidates": 75157
+    },
+    {
+      "file": "shard_00225.npz",
+      "rows": 8192,
+      "stored_candidates": 75148
+    },
+    {
+      "file": "shard_00226.npz",
+      "rows": 8192,
+      "stored_candidates": 75061
+    },
+    {
+      "file": "shard_00227.npz",
+      "rows": 8192,
+      "stored_candidates": 75278
+    },
+    {
+      "file": "shard_00228.npz",
+      "rows": 8192,
+      "stored_candidates": 75280
+    },
+    {
+      "file": "shard_00229.npz",
+      "rows": 8192,
+      "stored_candidates": 75226
+    },
+    {
+      "file": "shard_00230.npz",
+      "rows": 8192,
+      "stored_candidates": 75423
+    },
+    {
+      "file": "shard_00231.npz",
+      "rows": 8192,
+      "stored_candidates": 75382
+    },
+    {
+      "file": "shard_00232.npz",
+      "rows": 8192,
+      "stored_candidates": 75162
+    },
+    {
+      "file": "shard_00233.npz",
+      "rows": 8192,
+      "stored_candidates": 75458
+    },
+    {
+      "file": "shard_00234.npz",
+      "rows": 8192,
+      "stored_candidates": 75163
+    },
+    {
+      "file": "shard_00235.npz",
+      "rows": 8192,
+      "stored_candidates": 75245
+    },
+    {
+      "file": "shard_00236.npz",
+      "rows": 8192,
+      "stored_candidates": 75370
+    },
+    {
+      "file": "shard_00237.npz",
+      "rows": 8192,
+      "stored_candidates": 75225
+    },
+    {
+      "file": "shard_00238.npz",
+      "rows": 8192,
+      "stored_candidates": 75036
+    },
+    {
+      "file": "shard_00239.npz",
+      "rows": 8192,
+      "stored_candidates": 75427
+    },
+    {
+      "file": "shard_00240.npz",
+      "rows": 8192,
+      "stored_candidates": 75142
+    },
+    {
+      "file": "shard_00241.npz",
+      "rows": 8192,
+      "stored_candidates": 75303
+    },
+    {
+      "file": "shard_00242.npz",
+      "rows": 8192,
+      "stored_candidates": 75305
+    },
+    {
+      "file": "shard_00243.npz",
+      "rows": 8192,
+      "stored_candidates": 75272
+    },
+    {
+      "file": "shard_00244.npz",
+      "rows": 1152,
+      "stored_candidates": 10582
+    }
+  ]
+}

@@ -1,0 +1,3778 @@
+{
+  "metadata": {
+    "manifest": "data\\tetrio\\expert_v0\\train_full_fast_s8192\\manifest.json",
+    "expert": "data\\tetrio\\expert\\top_players_s1_train.parquet",
+    "max_total_raise": 4,
+    "note": "Only manifest-recorded failure examples are tested. No production rule is changed by this diagnostic."
+  },
+  "summary_by_piece": {
+    "T": {
+      "cases": 21,
+      "minimal_exact:1": 20,
+      "minimal_exact:0": 1
+    },
+    "Z": {
+      "cases": 3,
+      "minimal_exact:1": 2,
+      "minimal_exact:0": 1
+    },
+    "L": {
+      "cases": 4,
+      "minimal_exact:1": 3,
+      "minimal_exact:0": 1
+    },
+    "J": {
+      "cases": 6,
+      "minimal_exact:1": 4,
+      "minimal_exact:0": 2
+    },
+    "I": {
+      "cases": 7,
+      "minimal_exact:1": 5,
+      "minimal_exact:0": 2
+    },
+    "O": {
+      "cases": 3,
+      "minimal_exact:1": 3
+    },
+    "S": {
+      "cases": 6,
+      "minimal_exact:0": 3,
+      "minimal_exact:1": 3
+    }
+  },
+  "global_patterns": {
+    "exact:.Y.YY": 14,
+    "valid:.V.VV": 17,
+    "exact:.Y..Y": 12,
+    "valid:.V..V": 13,
+    "exact:.Y...": 14,
+    "valid:.V...": 10,
+    "exact:YY...": 2,
+    "valid:VV..V": 4,
+    "exact:YY.YY": 5,
+    "valid:VV.VV": 5,
+    "exact:YY..Y": 3,
+    "valid:VV...": 1
+  },
+  "unresolved_cases": 0,
+  "cases": [
+    {
+      "game_id": 19222,
+      "subframe": 9129,
+      "piece": "T",
+      "source_piece": "T",
+      "hold_mode": "no_hold",
+      "target": {
+        "x": 3,
+        "y": 17,
+        "rotation": 0
+      },
+      "valid_raises": [
+        1,
+        3,
+        4
+      ],
+      "exact_raises": [
+        1,
+        3,
+        4
+      ],
+      "minimal_exact_raise": 1,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 19,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": true,
+          "candidate_count": 35,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "right",
+            "down",
+            "down",
+            "left",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": true,
+          "candidate_count": 35,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "right",
+            "down",
+            "down",
+            "down",
+            "left",
+            "hard_drop"
+          ]
+        }
+      ]
+    },
+    {
+      "game_id": 59248,
+      "subframe": 21090,
+      "piece": "Z",
+      "source_piece": "Z",
+      "hold_mode": "no_hold",
+      "target": {
+        "x": 3,
+        "y": 17,
+        "rotation": 0
+      },
+      "valid_raises": [
+        1,
+        4
+      ],
+      "exact_raises": [
+        1,
+        4
+      ],
+      "minimal_exact_raise": 1,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 30,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": true,
+          "candidate_count": 30,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "left",
+            "cw",
+            "ccw",
+            "hard_drop"
+          ]
+        }
+      ]
+    },
+    {
+      "game_id": 92836,
+      "subframe": 7230,
+      "piece": "L",
+      "source_piece": "L",
+      "hold_mode": "no_hold",
+      "target": {
+        "x": 3,
+        "y": 17,
+        "rotation": 0
+      },
+      "valid_raises": [
+        1,
+        3,
+        4
+      ],
+      "exact_raises": [
+        1
+      ],
+      "minimal_exact_raise": 1,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 35,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": true,
+          "candidate_count": 34,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": true,
+          "candidate_count": 34,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        }
+      ]
+    },
+    {
+      "game_id": 22424,
+      "subframe": 36670,
+      "piece": "T",
+      "source_piece": "T",
+      "hold_mode": "no_hold",
+      "target": {
+        "x": 3,
+        "y": 17,
+        "rotation": 0
+      },
+      "valid_raises": [
+        1
+      ],
+      "exact_raises": [
+        1
+      ],
+      "minimal_exact_raise": 1,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 4,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        }
+      ]
+    },
+    {
+      "game_id": 123959,
+      "subframe": 22356,
+      "piece": "T",
+      "source_piece": "T",
+      "hold_mode": "no_hold",
+      "target": {
+        "x": 3,
+        "y": 20,
+        "rotation": 2
+      },
+      "valid_raises": [
+        1,
+        3,
+        4
+      ],
+      "exact_raises": [
+        1,
+        3,
+        4
+      ],
+      "minimal_exact_raise": 1,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 16,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "ccw",
+            "down",
+            "down",
+            "down",
+            "ccw",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": true,
+          "candidate_count": 40,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "ccw",
+            "down",
+            "down",
+            "down",
+            "down",
+            "down",
+            "ccw",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": true,
+          "candidate_count": 40,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "down",
+            "ccw",
+            "down",
+            "down",
+            "down",
+            "down",
+            "down",
+            "ccw",
+            "hard_drop"
+          ]
+        }
+      ]
+    },
+    {
+      "game_id": 89984,
+      "subframe": 39530,
+      "piece": "J",
+      "source_piece": "J",
+      "hold_mode": "no_hold",
+      "target": {
+        "x": 3,
+        "y": 17,
+        "rotation": 0
+      },
+      "valid_raises": [
+        1,
+        3,
+        4
+      ],
+      "exact_raises": [
+        1,
+        3,
+        4
+      ],
+      "minimal_exact_raise": 1,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 36,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": true,
+          "candidate_count": 36,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "ccw",
+            "down",
+            "down",
+            "cw",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": true,
+          "candidate_count": 36,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "down",
+            "ccw",
+            "down",
+            "down",
+            "cw",
+            "hard_drop"
+          ]
+        }
+      ]
+    },
+    {
+      "game_id": 86160,
+      "subframe": 15240,
+      "piece": "T",
+      "source_piece": "T",
+      "hold_mode": "no_hold",
+      "target": {
+        "x": 3,
+        "y": 17,
+        "rotation": 0
+      },
+      "valid_raises": [
+        1
+      ],
+      "exact_raises": [
+        1
+      ],
+      "minimal_exact_raise": 1,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 4,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        }
+      ]
+    },
+    {
+      "game_id": 109061,
+      "subframe": 8324,
+      "piece": "I",
+      "source_piece": "I",
+      "hold_mode": "hold_swap",
+      "target": {
+        "x": 0,
+        "y": 20,
+        "rotation": 1
+      },
+      "valid_raises": [
+        1,
+        3,
+        4
+      ],
+      "exact_raises": [
+        1,
+        3,
+        4
+      ],
+      "minimal_exact_raise": 1,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 30,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "left",
+            "cw",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": true,
+          "candidate_count": 30,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "ccw",
+            "ccw",
+            "left",
+            "ccw",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": true,
+          "candidate_count": 30,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "left",
+            "left",
+            "cw",
+            "left",
+            "hard_drop"
+          ]
+        }
+      ]
+    },
+    {
+      "game_id": 100432,
+      "subframe": 31842,
+      "piece": "O",
+      "source_piece": "O",
+      "hold_mode": "no_hold",
+      "target": {
+        "x": 4,
+        "y": 17,
+        "rotation": 0
+      },
+      "valid_raises": [
+        1
+      ],
+      "exact_raises": [
+        1
+      ],
+      "minimal_exact_raise": 1,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 4,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        }
+      ]
+    },
+    {
+      "game_id": 80324,
+      "subframe": 26030,
+      "piece": "T",
+      "source_piece": "T",
+      "hold_mode": "no_hold",
+      "target": {
+        "x": 3,
+        "y": 17,
+        "rotation": 2
+      },
+      "valid_raises": [
+        1,
+        4
+      ],
+      "exact_raises": [
+        1,
+        4
+      ],
+      "minimal_exact_raise": 1,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 4,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "180",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": true,
+          "candidate_count": 16,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "ccw",
+            "down",
+            "down",
+            "down",
+            "ccw",
+            "hard_drop"
+          ]
+        }
+      ]
+    },
+    {
+      "game_id": 61374,
+      "subframe": 43460,
+      "piece": "T",
+      "source_piece": "T",
+      "hold_mode": "no_hold",
+      "target": {
+        "x": 3,
+        "y": 17,
+        "rotation": 0
+      },
+      "valid_raises": [
+        1
+      ],
+      "exact_raises": [
+        1
+      ],
+      "minimal_exact_raise": 1,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 4,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        }
+      ]
+    },
+    {
+      "game_id": 60362,
+      "subframe": 11870,
+      "piece": "S",
+      "source_piece": "S",
+      "hold_mode": "hold_swap",
+      "target": {
+        "x": 3,
+        "y": 19,
+        "rotation": 1
+      },
+      "valid_raises": [
+        0,
+        1,
+        4
+      ],
+      "exact_raises": [
+        0,
+        1
+      ],
+      "minimal_exact_raise": 0,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": true,
+          "candidate_count": 6,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "cw",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 6,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "cw",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": true,
+          "candidate_count": 34,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        }
+      ]
+    },
+    {
+      "game_id": 77112,
+      "subframe": 6132,
+      "piece": "J",
+      "source_piece": "J",
+      "hold_mode": "no_hold",
+      "target": {
+        "x": 3,
+        "y": 17,
+        "rotation": 0
+      },
+      "valid_raises": [
+        1,
+        3,
+        4
+      ],
+      "exact_raises": [
+        1
+      ],
+      "minimal_exact_raise": 1,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 31,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": true,
+          "candidate_count": 29,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": true,
+          "candidate_count": 29,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        }
+      ]
+    },
+    {
+      "game_id": 87402,
+      "subframe": 20710,
+      "piece": "I",
+      "source_piece": "I",
+      "hold_mode": "no_hold",
+      "target": {
+        "x": 5,
+        "y": 17,
+        "rotation": 3
+      },
+      "valid_raises": [
+        1,
+        3,
+        4
+      ],
+      "exact_raises": [
+        1,
+        3,
+        4
+      ],
+      "minimal_exact_raise": 1,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 40,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "ccw",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": true,
+          "candidate_count": 40,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "ccw",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": true,
+          "candidate_count": 40,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "ccw",
+            "hard_drop"
+          ]
+        }
+      ]
+    },
+    {
+      "game_id": 39278,
+      "subframe": 7924,
+      "piece": "T",
+      "source_piece": "T",
+      "hold_mode": "hold_swap",
+      "target": {
+        "x": 3,
+        "y": 17,
+        "rotation": 2
+      },
+      "valid_raises": [
+        1,
+        4
+      ],
+      "exact_raises": [
+        1,
+        4
+      ],
+      "minimal_exact_raise": 1,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 4,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "180",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": true,
+          "candidate_count": 37,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "cw",
+            "down",
+            "down",
+            "down",
+            "cw",
+            "hard_drop"
+          ]
+        }
+      ]
+    },
+    {
+      "game_id": 99288,
+      "subframe": 19554,
+      "piece": "I",
+      "source_piece": "I",
+      "hold_mode": "no_hold",
+      "target": {
+        "x": 2,
+        "y": 18,
+        "rotation": 1
+      },
+      "valid_raises": [
+        1,
+        4
+      ],
+      "exact_raises": [
+        1,
+        4
+      ],
+      "minimal_exact_raise": 1,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 36,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "ccw",
+            "180",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": true,
+          "candidate_count": 36,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "cw",
+            "left",
+            "hard_drop"
+          ]
+        }
+      ]
+    },
+    {
+      "game_id": 113902,
+      "subframe": 31100,
+      "piece": "J",
+      "source_piece": "J",
+      "hold_mode": "no_hold",
+      "target": {
+        "x": 3,
+        "y": 17,
+        "rotation": 0
+      },
+      "valid_raises": [
+        1
+      ],
+      "exact_raises": [
+        1
+      ],
+      "minimal_exact_raise": 1,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 3,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        }
+      ]
+    },
+    {
+      "game_id": 81064,
+      "subframe": 9395,
+      "piece": "I",
+      "source_piece": "I",
+      "hold_mode": "no_hold",
+      "target": {
+        "x": 3,
+        "y": 18,
+        "rotation": 1
+      },
+      "valid_raises": [
+        1,
+        3,
+        4
+      ],
+      "exact_raises": [
+        1,
+        3,
+        4
+      ],
+      "minimal_exact_raise": 1,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 34,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "cw",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": true,
+          "candidate_count": 34,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "cw",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": true,
+          "candidate_count": 34,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "cw",
+            "hard_drop"
+          ]
+        }
+      ]
+    },
+    {
+      "game_id": 102070,
+      "subframe": 14468,
+      "piece": "S",
+      "source_piece": "S",
+      "hold_mode": "hold_swap",
+      "target": {
+        "x": 7,
+        "y": 18,
+        "rotation": 1
+      },
+      "valid_raises": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "exact_raises": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "minimal_exact_raise": 0,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": true,
+          "candidate_count": 36,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "right",
+            "ccw",
+            "cw",
+            "right",
+            "ccw",
+            "180",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 36,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "right",
+            "right",
+            "right",
+            "ccw",
+            "180",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": true,
+          "candidate_count": 36,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "right",
+            "right",
+            "right",
+            "cw",
+            "right",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": true,
+          "candidate_count": 36,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "right",
+            "right",
+            "right",
+            "cw",
+            "right",
+            "hard_drop"
+          ]
+        }
+      ]
+    },
+    {
+      "game_id": 53736,
+      "subframe": 15900,
+      "piece": "S",
+      "source_piece": "S",
+      "hold_mode": "no_hold",
+      "target": {
+        "x": 3,
+        "y": 17,
+        "rotation": 0
+      },
+      "valid_raises": [
+        1,
+        3,
+        4
+      ],
+      "exact_raises": [
+        1,
+        3,
+        4
+      ],
+      "minimal_exact_raise": 1,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 36,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": true,
+          "candidate_count": 36,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "cw",
+            "left",
+            "cw",
+            "180",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": true,
+          "candidate_count": 36,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "left",
+            "cw",
+            "down",
+            "cw",
+            "180",
+            "hard_drop"
+          ]
+        }
+      ]
+    },
+    {
+      "game_id": 25472,
+      "subframe": 21712,
+      "piece": "I",
+      "source_piece": "I",
+      "hold_mode": "hold_swap",
+      "target": {
+        "x": 3,
+        "y": 19,
+        "rotation": 3
+      },
+      "valid_raises": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "exact_raises": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "minimal_exact_raise": 0,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": true,
+          "candidate_count": 22,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "ccw",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 22,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "ccw",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": true,
+          "candidate_count": 38,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "ccw",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": true,
+          "candidate_count": 38,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "ccw",
+            "hard_drop"
+          ]
+        }
+      ]
+    },
+    {
+      "game_id": 98448,
+      "subframe": 7180,
+      "piece": "O",
+      "source_piece": "O",
+      "hold_mode": "no_hold",
+      "target": {
+        "x": 4,
+        "y": 17,
+        "rotation": 0
+      },
+      "valid_raises": [
+        1,
+        4
+      ],
+      "exact_raises": [
+        1,
+        4
+      ],
+      "minimal_exact_raise": 1,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 12,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": true,
+          "candidate_count": 28,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "right",
+            "right",
+            "down",
+            "down",
+            "down",
+            "left",
+            "left",
+            "hard_drop"
+          ]
+        }
+      ]
+    },
+    {
+      "game_id": 55480,
+      "subframe": 9583,
+      "piece": "Z",
+      "source_piece": "Z",
+      "hold_mode": "no_hold",
+      "target": {
+        "x": 4,
+        "y": 18,
+        "rotation": 1
+      },
+      "valid_raises": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "exact_raises": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "minimal_exact_raise": 0,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": true,
+          "candidate_count": 42,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "cw",
+            "right",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 42,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "cw",
+            "right",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": true,
+          "candidate_count": 42,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "ccw",
+            "180",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": true,
+          "candidate_count": 42,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "ccw",
+            "180",
+            "hard_drop"
+          ]
+        }
+      ]
+    },
+    {
+      "game_id": 5178,
+      "subframe": 52364,
+      "piece": "J",
+      "source_piece": "J",
+      "hold_mode": "no_hold",
+      "target": {
+        "x": 2,
+        "y": 19,
+        "rotation": 1
+      },
+      "valid_raises": [
+        0,
+        1,
+        4
+      ],
+      "exact_raises": [
+        0,
+        1,
+        4
+      ],
+      "minimal_exact_raise": 0,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": true,
+          "candidate_count": 38,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "cw",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 38,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "cw",
+            "left",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": true,
+          "candidate_count": 38,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "cw",
+            "down",
+            "down",
+            "down",
+            "left",
+            "hard_drop"
+          ]
+        }
+      ]
+    },
+    {
+      "game_id": 102438,
+      "subframe": 5305,
+      "piece": "O",
+      "source_piece": "O",
+      "hold_mode": "hold_swap",
+      "target": {
+        "x": 4,
+        "y": 17,
+        "rotation": 0
+      },
+      "valid_raises": [
+        1,
+        4
+      ],
+      "exact_raises": [
+        1
+      ],
+      "minimal_exact_raise": 1,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 4,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": true,
+          "candidate_count": 32,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        }
+      ]
+    },
+    {
+      "game_id": 62208,
+      "subframe": 38480,
+      "piece": "T",
+      "source_piece": "T",
+      "hold_mode": "no_hold",
+      "target": {
+        "x": 3,
+        "y": 17,
+        "rotation": 0
+      },
+      "valid_raises": [
+        1
+      ],
+      "exact_raises": [
+        1
+      ],
+      "minimal_exact_raise": 1,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 4,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        }
+      ]
+    },
+    {
+      "game_id": 119098,
+      "subframe": 3937,
+      "piece": "L",
+      "source_piece": "L",
+      "hold_mode": "no_hold",
+      "target": {
+        "x": 3,
+        "y": 17,
+        "rotation": 0
+      },
+      "valid_raises": [
+        1
+      ],
+      "exact_raises": [
+        1
+      ],
+      "minimal_exact_raise": 1,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 50,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        }
+      ]
+    },
+    {
+      "game_id": 110330,
+      "subframe": 4166,
+      "piece": "I",
+      "source_piece": "I",
+      "hold_mode": "no_hold",
+      "target": {
+        "x": 3,
+        "y": 20,
+        "rotation": 3
+      },
+      "valid_raises": [
+        1,
+        3,
+        4
+      ],
+      "exact_raises": [
+        1,
+        3,
+        4
+      ],
+      "minimal_exact_raise": 1,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 36,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "ccw",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": true,
+          "candidate_count": 36,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "ccw",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": true,
+          "candidate_count": 36,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "ccw",
+            "hard_drop"
+          ]
+        }
+      ]
+    },
+    {
+      "game_id": 16424,
+      "subframe": 7290,
+      "piece": "J",
+      "source_piece": "J",
+      "hold_mode": "no_hold",
+      "target": {
+        "x": 4,
+        "y": 22,
+        "rotation": 2
+      },
+      "valid_raises": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "exact_raises": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "minimal_exact_raise": 0,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": true,
+          "candidate_count": 22,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "180",
+            "right",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 23,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "180",
+            "right",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": true,
+          "candidate_count": 42,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "cw",
+            "down",
+            "cw",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": true,
+          "candidate_count": 42,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "down",
+            "cw",
+            "down",
+            "cw",
+            "hard_drop"
+          ]
+        }
+      ]
+    },
+    {
+      "game_id": 72006,
+      "subframe": 13710,
+      "piece": "S",
+      "source_piece": "S",
+      "hold_mode": "no_hold",
+      "target": {
+        "x": 3,
+        "y": 17,
+        "rotation": 0
+      },
+      "valid_raises": [
+        1,
+        3,
+        4
+      ],
+      "exact_raises": [
+        1,
+        3,
+        4
+      ],
+      "minimal_exact_raise": 1,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 36,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": true,
+          "candidate_count": 36,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "left",
+            "cw",
+            "cw",
+            "180",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": true,
+          "candidate_count": 36,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "left",
+            "down",
+            "cw",
+            "cw",
+            "180",
+            "hard_drop"
+          ]
+        }
+      ]
+    },
+    {
+      "game_id": 113580,
+      "subframe": 43660,
+      "piece": "T",
+      "source_piece": "T",
+      "hold_mode": "no_hold",
+      "target": {
+        "x": 3,
+        "y": 17,
+        "rotation": 0
+      },
+      "valid_raises": [
+        1
+      ],
+      "exact_raises": [
+        1
+      ],
+      "minimal_exact_raise": 1,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 4,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        }
+      ]
+    },
+    {
+      "game_id": 28788,
+      "subframe": 8378,
+      "piece": "T",
+      "source_piece": "T",
+      "hold_mode": "no_hold",
+      "target": {
+        "x": 3,
+        "y": 17,
+        "rotation": 2
+      },
+      "valid_raises": [
+        1,
+        4
+      ],
+      "exact_raises": [
+        1,
+        4
+      ],
+      "minimal_exact_raise": 1,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 4,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "180",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": true,
+          "candidate_count": 37,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "cw",
+            "down",
+            "down",
+            "down",
+            "cw",
+            "hard_drop"
+          ]
+        }
+      ]
+    },
+    {
+      "game_id": 59920,
+      "subframe": 26389,
+      "piece": "T",
+      "source_piece": "T",
+      "hold_mode": "no_hold",
+      "target": {
+        "x": 3,
+        "y": 17,
+        "rotation": 2
+      },
+      "valid_raises": [
+        1,
+        4
+      ],
+      "exact_raises": [
+        1,
+        4
+      ],
+      "minimal_exact_raise": 1,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 4,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "180",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": true,
+          "candidate_count": 32,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "ccw",
+            "down",
+            "down",
+            "down",
+            "ccw",
+            "hard_drop"
+          ]
+        }
+      ]
+    },
+    {
+      "game_id": 113414,
+      "subframe": 34870,
+      "piece": "T",
+      "source_piece": "T",
+      "hold_mode": "no_hold",
+      "target": {
+        "x": 3,
+        "y": 17,
+        "rotation": 2
+      },
+      "valid_raises": [
+        1,
+        4
+      ],
+      "exact_raises": [
+        1,
+        4
+      ],
+      "minimal_exact_raise": 1,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 4,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "180",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": true,
+          "candidate_count": 16,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "ccw",
+            "down",
+            "down",
+            "down",
+            "ccw",
+            "hard_drop"
+          ]
+        }
+      ]
+    },
+    {
+      "game_id": 19210,
+      "subframe": 13691,
+      "piece": "T",
+      "source_piece": "T",
+      "hold_mode": "hold_swap",
+      "target": {
+        "x": 3,
+        "y": 20,
+        "rotation": 0
+      },
+      "valid_raises": [
+        0,
+        1
+      ],
+      "exact_raises": [
+        0,
+        1
+      ],
+      "minimal_exact_raise": 0,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": true,
+          "candidate_count": 12,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 16,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        }
+      ]
+    },
+    {
+      "game_id": 108690,
+      "subframe": 4836,
+      "piece": "Z",
+      "source_piece": "Z",
+      "hold_mode": "no_hold",
+      "target": {
+        "x": 3,
+        "y": 17,
+        "rotation": 0
+      },
+      "valid_raises": [
+        1,
+        4
+      ],
+      "exact_raises": [
+        1,
+        4
+      ],
+      "minimal_exact_raise": 1,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 16,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": true,
+          "candidate_count": 40,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "ccw",
+            "down",
+            "down",
+            "ccw",
+            "180",
+            "hard_drop"
+          ]
+        }
+      ]
+    },
+    {
+      "game_id": 10174,
+      "subframe": 55385,
+      "piece": "J",
+      "source_piece": "J",
+      "hold_mode": "no_hold",
+      "target": {
+        "x": 2,
+        "y": 19,
+        "rotation": 1
+      },
+      "valid_raises": [
+        1,
+        4
+      ],
+      "exact_raises": [
+        1,
+        4
+      ],
+      "minimal_exact_raise": 1,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 31,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "cw",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": true,
+          "candidate_count": 31,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "cw",
+            "left",
+            "hard_drop"
+          ]
+        }
+      ]
+    },
+    {
+      "game_id": 61662,
+      "subframe": 8006,
+      "piece": "T",
+      "source_piece": "T",
+      "hold_mode": "no_hold",
+      "target": {
+        "x": 3,
+        "y": 20,
+        "rotation": 2
+      },
+      "valid_raises": [
+        1,
+        3,
+        4
+      ],
+      "exact_raises": [
+        1,
+        3,
+        4
+      ],
+      "minimal_exact_raise": 1,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 15,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "cw",
+            "down",
+            "down",
+            "down",
+            "cw",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": true,
+          "candidate_count": 40,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "cw",
+            "down",
+            "down",
+            "down",
+            "down",
+            "down",
+            "cw",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": true,
+          "candidate_count": 40,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "down",
+            "cw",
+            "down",
+            "down",
+            "down",
+            "down",
+            "down",
+            "cw",
+            "hard_drop"
+          ]
+        }
+      ]
+    },
+    {
+      "game_id": 86868,
+      "subframe": 14120,
+      "piece": "L",
+      "source_piece": "L",
+      "hold_mode": "no_hold",
+      "target": {
+        "x": 3,
+        "y": 17,
+        "rotation": 0
+      },
+      "valid_raises": [
+        1
+      ],
+      "exact_raises": [
+        1
+      ],
+      "minimal_exact_raise": 1,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 35,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        }
+      ]
+    },
+    {
+      "game_id": 94400,
+      "subframe": 4011,
+      "piece": "T",
+      "source_piece": "T",
+      "hold_mode": "hold_swap",
+      "target": {
+        "x": 3,
+        "y": 17,
+        "rotation": 2
+      },
+      "valid_raises": [
+        1,
+        4
+      ],
+      "exact_raises": [
+        1,
+        4
+      ],
+      "minimal_exact_raise": 1,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 4,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "180",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": true,
+          "candidate_count": 33,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "cw",
+            "down",
+            "down",
+            "down",
+            "cw",
+            "hard_drop"
+          ]
+        }
+      ]
+    },
+    {
+      "game_id": 13872,
+      "subframe": 10380,
+      "piece": "T",
+      "source_piece": "T",
+      "hold_mode": "no_hold",
+      "target": {
+        "x": 3,
+        "y": 17,
+        "rotation": 0
+      },
+      "valid_raises": [
+        1,
+        3,
+        4
+      ],
+      "exact_raises": [
+        1
+      ],
+      "minimal_exact_raise": 1,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 35,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": true,
+          "candidate_count": 34,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": true,
+          "candidate_count": 34,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        }
+      ]
+    },
+    {
+      "game_id": 41612,
+      "subframe": 8100,
+      "piece": "T",
+      "source_piece": "T",
+      "hold_mode": "no_hold",
+      "target": {
+        "x": 3,
+        "y": 17,
+        "rotation": 2
+      },
+      "valid_raises": [
+        1,
+        3,
+        4
+      ],
+      "exact_raises": [
+        1,
+        3,
+        4
+      ],
+      "minimal_exact_raise": 1,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 4,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "180",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": true,
+          "candidate_count": 12,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "ccw",
+            "down",
+            "down",
+            "ccw",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": true,
+          "candidate_count": 12,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "down",
+            "ccw",
+            "down",
+            "down",
+            "ccw",
+            "hard_drop"
+          ]
+        }
+      ]
+    },
+    {
+      "game_id": 91197,
+      "subframe": 60451,
+      "piece": "T",
+      "source_piece": "T",
+      "hold_mode": "no_hold",
+      "target": {
+        "x": 1,
+        "y": 23,
+        "rotation": 2
+      },
+      "valid_raises": [
+        1,
+        3,
+        4
+      ],
+      "exact_raises": [
+        1,
+        3,
+        4
+      ],
+      "minimal_exact_raise": 1,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 18,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "left",
+            "left",
+            "down",
+            "ccw",
+            "down",
+            "down",
+            "down",
+            "down",
+            "down",
+            "ccw",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": true,
+          "candidate_count": 38,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "left",
+            "left",
+            "down",
+            "down",
+            "down",
+            "ccw",
+            "down",
+            "down",
+            "down",
+            "down",
+            "down",
+            "ccw",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": true,
+          "candidate_count": 38,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "left",
+            "left",
+            "down",
+            "down",
+            "down",
+            "down",
+            "ccw",
+            "down",
+            "down",
+            "down",
+            "down",
+            "down",
+            "ccw",
+            "hard_drop"
+          ]
+        }
+      ]
+    },
+    {
+      "game_id": 24478,
+      "subframe": 29455,
+      "piece": "I",
+      "source_piece": "I",
+      "hold_mode": "no_hold",
+      "target": {
+        "x": 3,
+        "y": 18,
+        "rotation": 0
+      },
+      "valid_raises": [
+        0,
+        1,
+        4
+      ],
+      "exact_raises": [
+        0,
+        1,
+        4
+      ],
+      "minimal_exact_raise": 0,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": true,
+          "candidate_count": 22,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 22,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": true,
+          "candidate_count": 38,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "cw",
+            "down",
+            "down",
+            "cw",
+            "180",
+            "hard_drop"
+          ]
+        }
+      ]
+    },
+    {
+      "game_id": 102070,
+      "subframe": 14649,
+      "piece": "L",
+      "source_piece": "L",
+      "hold_mode": "no_hold",
+      "target": {
+        "x": 5,
+        "y": 17,
+        "rotation": 3
+      },
+      "valid_raises": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "exact_raises": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "minimal_exact_raise": 0,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": true,
+          "candidate_count": 10,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "ccw",
+            "right",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 10,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "ccw",
+            "right",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": true,
+          "candidate_count": 36,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "right",
+            "ccw",
+            "right",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": true,
+          "candidate_count": 36,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "right",
+            "ccw",
+            "right",
+            "hard_drop"
+          ]
+        }
+      ]
+    },
+    {
+      "game_id": 98096,
+      "subframe": 89048,
+      "piece": "T",
+      "source_piece": "T",
+      "hold_mode": "no_hold",
+      "target": {
+        "x": 3,
+        "y": 17,
+        "rotation": 2
+      },
+      "valid_raises": [
+        1,
+        3,
+        4
+      ],
+      "exact_raises": [
+        1,
+        3,
+        4
+      ],
+      "minimal_exact_raise": 1,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 4,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "180",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": true,
+          "candidate_count": 24,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "ccw",
+            "down",
+            "down",
+            "ccw",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": true,
+          "candidate_count": 24,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "down",
+            "ccw",
+            "down",
+            "down",
+            "ccw",
+            "hard_drop"
+          ]
+        }
+      ]
+    },
+    {
+      "game_id": 55596,
+      "subframe": 6475,
+      "piece": "T",
+      "source_piece": "T",
+      "hold_mode": "hold_swap",
+      "target": {
+        "x": 3,
+        "y": 20,
+        "rotation": 2
+      },
+      "valid_raises": [
+        1,
+        4
+      ],
+      "exact_raises": [
+        1,
+        4
+      ],
+      "minimal_exact_raise": 1,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 20,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "ccw",
+            "down",
+            "down",
+            "down",
+            "ccw",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": true,
+          "candidate_count": 44,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "left",
+            "ccw",
+            "down",
+            "down",
+            "down",
+            "right",
+            "down",
+            "down",
+            "down",
+            "ccw",
+            "hard_drop"
+          ]
+        }
+      ]
+    },
+    {
+      "game_id": 87036,
+      "subframe": 9370,
+      "piece": "S",
+      "source_piece": "S",
+      "hold_mode": "no_hold",
+      "target": {
+        "x": 3,
+        "y": 17,
+        "rotation": 0
+      },
+      "valid_raises": [
+        1
+      ],
+      "exact_raises": [
+        1
+      ],
+      "minimal_exact_raise": 1,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 8,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        }
+      ]
+    },
+    {
+      "game_id": 70776,
+      "subframe": 35817,
+      "piece": "S",
+      "source_piece": "S",
+      "hold_mode": "no_hold",
+      "target": {
+        "x": 3,
+        "y": 18,
+        "rotation": 0
+      },
+      "valid_raises": [
+        0,
+        1,
+        4
+      ],
+      "exact_raises": [
+        0,
+        1,
+        4
+      ],
+      "minimal_exact_raise": 0,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": true,
+          "candidate_count": 36,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 36,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": true,
+          "candidate_count": 36,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "cw",
+            "down",
+            "down",
+            "cw",
+            "180",
+            "hard_drop"
+          ]
+        }
+      ]
+    },
+    {
+      "game_id": 49552,
+      "subframe": 16503,
+      "piece": "T",
+      "source_piece": "T",
+      "hold_mode": "no_hold",
+      "target": {
+        "x": 3,
+        "y": 17,
+        "rotation": 2
+      },
+      "valid_raises": [
+        1,
+        3,
+        4
+      ],
+      "exact_raises": [
+        1,
+        3,
+        4
+      ],
+      "minimal_exact_raise": 1,
+      "trials": [
+        {
+          "total_raise": 0,
+          "start_y": 18,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 1,
+          "start_y": 17,
+          "valid": true,
+          "candidate_count": 4,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "180",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 2,
+          "start_y": 16,
+          "valid": false,
+          "candidate_count": 0,
+          "expert_exact": false,
+          "shortest_exact_path": null
+        },
+        {
+          "total_raise": 3,
+          "start_y": 15,
+          "valid": true,
+          "candidate_count": 17,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "cw",
+            "down",
+            "down",
+            "cw",
+            "hard_drop"
+          ]
+        },
+        {
+          "total_raise": 4,
+          "start_y": 14,
+          "valid": true,
+          "candidate_count": 17,
+          "expert_exact": true,
+          "shortest_exact_path": [
+            "down",
+            "cw",
+            "down",
+            "down",
+            "cw",
+            "hard_drop"
+          ]
+        }
+      ]
+    }
+  ]
+}

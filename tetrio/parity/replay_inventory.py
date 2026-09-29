@@ -80,35 +80,83 @@ class ReplayInventory:
         }
 
 
+def _summary(
+    *,
+    round_index: int,
+    replay_index: int,
+    replay: Any,
+) -> ReplayPlayerSummary | None:
+    if not isinstance(replay, dict):
+        return None
+    frames = replay.get("frames")
+    return ReplayPlayerSummary(
+        round_index=round_index,
+        replay_index=replay_index,
+        frames=int(frames) if isinstance(frames, int) else None,
+        keys=tuple(sorted(str(k) for k in replay)),
+    )
+
+
 def _extract_round_replays(obj: Any) -> tuple[int | None, tuple[ReplayPlayerSummary, ...]]:
-    # Community TETR.IO tooling represents multiplayer .ttrm data as
-    # root["data"][round]["replays"].  Do not assume any deeper event schema.
+    """Discover multiplayer player-replay streams in known .ttrm containers.
+
+    Historical/community tooling used:
+
+        root["data"][round]["replays"][player]
+
+    Current saved multiplayer replays observed in 2026 use:
+
+        root["replay"]["rounds"][round][player]["replay"]
+
+    This routine only identifies containers and frame counts.  It still makes
+    no semantic assumptions about gameplay events.
+    """
     if not isinstance(obj, dict):
         return None, ()
-    data = obj.get("data")
-    if not isinstance(data, list):
-        return None, ()
 
-    summaries: list[ReplayPlayerSummary] = []
-    for round_index, round_obj in enumerate(data):
-        if not isinstance(round_obj, dict):
-            continue
-        replays = round_obj.get("replays")
-        if not isinstance(replays, list):
-            continue
-        for replay_index, replay in enumerate(replays):
-            if not isinstance(replay, dict):
+    # Current schema first.
+    root_replay = obj.get("replay")
+    if isinstance(root_replay, dict):
+        rounds = root_replay.get("rounds")
+        if isinstance(rounds, list):
+            summaries: list[ReplayPlayerSummary] = []
+            for round_index, round_obj in enumerate(rounds):
+                if not isinstance(round_obj, list):
+                    continue
+                for replay_index, player_obj in enumerate(round_obj):
+                    if not isinstance(player_obj, dict):
+                        continue
+                    replay = player_obj.get("replay")
+                    item = _summary(
+                        round_index=round_index,
+                        replay_index=replay_index,
+                        replay=replay,
+                    )
+                    if item is not None:
+                        summaries.append(item)
+            return len(rounds), tuple(summaries)
+
+    # Legacy/community schema retained for backwards compatibility.
+    data = obj.get("data")
+    if isinstance(data, list):
+        summaries = []
+        for round_index, round_obj in enumerate(data):
+            if not isinstance(round_obj, dict):
                 continue
-            frames = replay.get("frames")
-            summaries.append(
-                ReplayPlayerSummary(
+            replays = round_obj.get("replays")
+            if not isinstance(replays, list):
+                continue
+            for replay_index, replay in enumerate(replays):
+                item = _summary(
                     round_index=round_index,
                     replay_index=replay_index,
-                    frames=int(frames) if isinstance(frames, int) else None,
-                    keys=tuple(sorted(str(k) for k in replay)),
+                    replay=replay,
                 )
-            )
-    return len(data), tuple(summaries)
+                if item is not None:
+                    summaries.append(item)
+        return len(data), tuple(summaries)
+
+    return None, ()
 
 
 def inspect_ttrm_object(

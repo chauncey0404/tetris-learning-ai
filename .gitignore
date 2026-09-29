@@ -34,3 +34,4 @@ artifacts/
 # Local TETR.IO datasets
 data/tetrio/raw/
 data/tetrio/**/*.parquet
+data/tetrio/expert_v0/

@@ -1,0 +1,549 @@
+{
+  "format": "tetrio_expert_v1_counterfactual_sidecar_v1",
+  "status": "PASS",
+  "v0_cache": "data\\tetrio\\expert_v0\\train_full_fast_s8192",
+  "v0_manifest_sha256": "a2194153645367aa2966b7e7b228c1db6a366215ebc2c42473a7253da020dbcb",
+  "available_v0_rows": 6625592,
+  "requested_rows": 500000,
+  "built_rows": 500000,
+  "fresh_rows": 401696,
+  "reused_rows": 98304,
+  "reuse_dir": "data\\tetrio\\expert_v1_cf\\train_100k",
+  "selected_candidates_reused": 17366682,
+  "counterfactual_candidates": 17296213,
+  "joint_mean_candidates": 69.32579,
+  "backend": "fast",
+  "fast_max_states": 10000,
+  "reference_max_states": 50000,
+  "reference_audit_every": 5000,
+  "reference_audits": 80,
+  "reference_fallbacks": 0,
+  "seconds": 385.8491733999981,
+  "rows_per_second": 1041.0700027172898,
+  "rows_per_second_scope": "fresh rows only",
+  "candidate_contract": "V0 expert-selected branch reused + opposite Hold branch sidecar; both branches compete jointly in Expert-v1",
+  "structural_metadata": "holes_before + holes for every selected/counterfactual candidate",
+  "failures": [],
+  "shards": [
+    {
+      "file": "shard_00000.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283556,
+      "selected_candidates": 284581,
+      "min_counterfactual_candidates": 9,
+      "max_counterfactual_candidates": 44,
+      "reused": true,
+      "reuse_kind": "reuse-dir"
+    },
+    {
+      "file": "shard_00001.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283219,
+      "selected_candidates": 284582,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 44,
+      "reused": true,
+      "reuse_kind": "reuse-dir"
+    },
+    {
+      "file": "shard_00002.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283245,
+      "selected_candidates": 284446,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 45,
+      "reused": true,
+      "reuse_kind": "reuse-dir"
+    },
+    {
+      "file": "shard_00003.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283311,
+      "selected_candidates": 284521,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 43,
+      "reused": true,
+      "reuse_kind": "reuse-dir"
+    },
+    {
+      "file": "shard_00004.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283445,
+      "selected_candidates": 284652,
+      "min_counterfactual_candidates": 16,
+      "max_counterfactual_candidates": 44,
+      "reused": true,
+      "reuse_kind": "reuse-dir"
+    },
+    {
+      "file": "shard_00005.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283531,
+      "selected_candidates": 284580,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 48,
+      "reused": true,
+      "reuse_kind": "reuse-dir"
+    },
+    {
+      "file": "shard_00006.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283337,
+      "selected_candidates": 284593,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 44,
+      "reused": true,
+      "reuse_kind": "reuse-dir"
+    },
+    {
+      "file": "shard_00007.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283347,
+      "selected_candidates": 284467,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 46,
+      "reused": true,
+      "reuse_kind": "reuse-dir"
+    },
+    {
+      "file": "shard_00008.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283478,
+      "selected_candidates": 284560,
+      "min_counterfactual_candidates": 4,
+      "max_counterfactual_candidates": 45,
+      "reused": true,
+      "reuse_kind": "reuse-dir"
+    },
+    {
+      "file": "shard_00009.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283368,
+      "selected_candidates": 284511,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 46,
+      "reused": true,
+      "reuse_kind": "reuse-dir"
+    },
+    {
+      "file": "shard_00010.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283294,
+      "selected_candidates": 284526,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 44,
+      "reused": true,
+      "reuse_kind": "reuse-dir"
+    },
+    {
+      "file": "shard_00011.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283449,
+      "selected_candidates": 284336,
+      "min_counterfactual_candidates": 8,
+      "max_counterfactual_candidates": 44,
+      "reused": true,
+      "reuse_kind": "reuse-dir"
+    },
+    {
+      "file": "shard_00012.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283458,
+      "selected_candidates": 284578,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 45
+    },
+    {
+      "file": "shard_00013.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283207,
+      "selected_candidates": 284358,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 46
+    },
+    {
+      "file": "shard_00014.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283393,
+      "selected_candidates": 284627,
+      "min_counterfactual_candidates": 4,
+      "max_counterfactual_candidates": 46
+    },
+    {
+      "file": "shard_00015.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283560,
+      "selected_candidates": 284533,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 44
+    },
+    {
+      "file": "shard_00016.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283200,
+      "selected_candidates": 284543,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 48
+    },
+    {
+      "file": "shard_00017.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283433,
+      "selected_candidates": 284664,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 47
+    },
+    {
+      "file": "shard_00018.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283304,
+      "selected_candidates": 284541,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 48
+    },
+    {
+      "file": "shard_00019.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283552,
+      "selected_candidates": 284664,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 48
+    },
+    {
+      "file": "shard_00020.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283338,
+      "selected_candidates": 284327,
+      "min_counterfactual_candidates": 8,
+      "max_counterfactual_candidates": 44
+    },
+    {
+      "file": "shard_00021.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283224,
+      "selected_candidates": 284519,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 44
+    },
+    {
+      "file": "shard_00022.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283351,
+      "selected_candidates": 284401,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 46
+    },
+    {
+      "file": "shard_00023.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283476,
+      "selected_candidates": 284754,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 44
+    },
+    {
+      "file": "shard_00024.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283361,
+      "selected_candidates": 284566,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 46
+    },
+    {
+      "file": "shard_00025.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283406,
+      "selected_candidates": 284490,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 46
+    },
+    {
+      "file": "shard_00026.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283203,
+      "selected_candidates": 284376,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 49
+    },
+    {
+      "file": "shard_00027.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283133,
+      "selected_candidates": 284419,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 44
+    },
+    {
+      "file": "shard_00028.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283228,
+      "selected_candidates": 284593,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 44
+    },
+    {
+      "file": "shard_00029.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283315,
+      "selected_candidates": 284498,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 45
+    },
+    {
+      "file": "shard_00030.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283385,
+      "selected_candidates": 284482,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 54
+    },
+    {
+      "file": "shard_00031.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283705,
+      "selected_candidates": 284835,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 54
+    },
+    {
+      "file": "shard_00032.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283344,
+      "selected_candidates": 284524,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 63
+    },
+    {
+      "file": "shard_00033.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283357,
+      "selected_candidates": 284313,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 42
+    },
+    {
+      "file": "shard_00034.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283475,
+      "selected_candidates": 284637,
+      "min_counterfactual_candidates": 14,
+      "max_counterfactual_candidates": 47
+    },
+    {
+      "file": "shard_00035.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283254,
+      "selected_candidates": 284247,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 42
+    },
+    {
+      "file": "shard_00036.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283397,
+      "selected_candidates": 284540,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 48
+    },
+    {
+      "file": "shard_00037.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283633,
+      "selected_candidates": 284688,
+      "min_counterfactual_candidates": 16,
+      "max_counterfactual_candidates": 46
+    },
+    {
+      "file": "shard_00038.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283259,
+      "selected_candidates": 284575,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 45
+    },
+    {
+      "file": "shard_00039.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283460,
+      "selected_candidates": 284458,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 48
+    },
+    {
+      "file": "shard_00040.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283400,
+      "selected_candidates": 284493,
+      "min_counterfactual_candidates": 10,
+      "max_counterfactual_candidates": 44
+    },
+    {
+      "file": "shard_00041.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283360,
+      "selected_candidates": 284536,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 56
+    },
+    {
+      "file": "shard_00042.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283454,
+      "selected_candidates": 284774,
+      "min_counterfactual_candidates": 16,
+      "max_counterfactual_candidates": 44
+    },
+    {
+      "file": "shard_00043.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283297,
+      "selected_candidates": 284378,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 46
+    },
+    {
+      "file": "shard_00044.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283315,
+      "selected_candidates": 284661,
+      "min_counterfactual_candidates": 4,
+      "max_counterfactual_candidates": 46
+    },
+    {
+      "file": "shard_00045.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283543,
+      "selected_candidates": 284790,
+      "min_counterfactual_candidates": 10,
+      "max_counterfactual_candidates": 44
+    },
+    {
+      "file": "shard_00046.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283199,
+      "selected_candidates": 284484,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 46
+    },
+    {
+      "file": "shard_00047.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283591,
+      "selected_candidates": 284503,
+      "min_counterfactual_candidates": 18,
+      "max_counterfactual_candidates": 44
+    },
+    {
+      "file": "shard_00048.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283281,
+      "selected_candidates": 284444,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 45
+    },
+    {
+      "file": "shard_00049.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283458,
+      "selected_candidates": 284460,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 53
+    },
+    {
+      "file": "shard_00050.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283409,
+      "selected_candidates": 284729,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 52
+    },
+    {
+      "file": "shard_00051.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283245,
+      "selected_candidates": 284699,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 44
+    },
+    {
+      "file": "shard_00052.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283163,
+      "selected_candidates": 284256,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 44
+    },
+    {
+      "file": "shard_00053.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283474,
+      "selected_candidates": 284657,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 42
+    },
+    {
+      "file": "shard_00054.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283461,
+      "selected_candidates": 284710,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 43
+    },
+    {
+      "file": "shard_00055.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283498,
+      "selected_candidates": 284511,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 46
+    },
+    {
+      "file": "shard_00056.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283524,
+      "selected_candidates": 284565,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 44
+    },
+    {
+      "file": "shard_00057.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283437,
+      "selected_candidates": 284532,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 44
+    },
+    {
+      "file": "shard_00058.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283552,
+      "selected_candidates": 284559,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 52
+    },
+    {
+      "file": "shard_00059.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283325,
+      "selected_candidates": 284414,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 44
+    },
+    {
+      "file": "shard_00060.npz",
+      "rows": 8192,
+      "counterfactual_candidates": 283273,
+      "selected_candidates": 284376,
+      "min_counterfactual_candidates": 0,
+      "max_counterfactual_candidates": 44
+    },
+    {
+      "file": "shard_00061.npz",
+      "rows": 288,
+      "counterfactual_candidates": 9963,
+      "selected_candidates": 10046,
+      "min_counterfactual_candidates": 30,
+      "max_counterfactual_candidates": 42
+    }
+  ]
+}
